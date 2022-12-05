@@ -28,7 +28,7 @@ public class Player : KinematicBody2D
     public override void _Ready()
     {
         state = EVENT.MOVE;
-        camera = GetParent().GetNode<Camera2D>("Camera2D");
+        camera = GetParent().GetNode<Camera2D>("CameraPlayer");
         animPlayer = this.GetNode<AnimationPlayer>("AnimationPlayer");
         animTree = this.GetNode<AnimationTree>("AnimationTree");
         animTree.Active = true;
@@ -118,7 +118,7 @@ public class Player : KinematicBody2D
         state = EVENT.MOVE;
     }
 
-    private void _on_Director_animation_started(string animName)
+    private void _on_Director_animation_started(String animName)
     {
         state = EVENT.STOP;
     }

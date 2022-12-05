@@ -18,6 +18,10 @@ public class NPC : KinematicBody2D
     Label textBox;
     Area2D collisionSpace;
     String animName;
+    int actNumber;
+    public bool condition;
+
+    String[] animations = {"ACT1"};
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
@@ -27,7 +31,9 @@ public class NPC : KinematicBody2D
         collisionSpace = GetNode<Area2D>("CollisionSpace");
         collisionSpace.Monitoring = true;
         TextBox.Visible = false;
-        animName = "ACT1";
+        actNumber = 0;
+        animName = animations[actNumber];
+        condition = false;
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -40,7 +46,8 @@ public class NPC : KinematicBody2D
         if(body.Name != "Player")
             return;
         AnimationPlayer animPlayer = GetParent().GetNode<AnimationPlayer>("Director");
-        animPlayer.Play(animName);
+        if(condition == true || actNumber == 0)
+            animPlayer.Play(animations[actNumber]);
     }
 
     public void insertText(String text)
@@ -51,7 +58,15 @@ public class NPC : KinematicBody2D
 
     private void _on_Director_animation_finished(String animName)
     {
+        if(animations[animations.Length - 1] == animName)
+        {
+            collisionSpace.Monitoring = false;
+        }
+        else
+        {
+            actNumber++;
+        }
+
         TextBox.Visible = false;
-        collisionSpace.Monitoring = false;
     }
 }

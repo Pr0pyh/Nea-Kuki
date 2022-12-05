@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Enemies/Bat.png" type="Texture" id=1]
 [ext_resource path="res://player2/player2.cs" type="Script" id=2]
 [ext_resource path="res://Shadows/LargeShadow.png" type="Texture" id=3]
+[ext_resource path="res://TextBox/TextBox.tscn" type="PackedScene" id=4]
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
@@ -40,7 +41,7 @@ script = ExtResource( 2 )
 
 [node name="Spriteplayer" type="AnimatedSprite" parent="."]
 frames = SubResource( 7 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -50,3 +51,21 @@ shape = SubResource( 1 )
 position = Vector2( 0.500002, 0.500001 )
 scale = Vector2( 3.90625, 6.25 )
 texture = ExtResource( 3 )
+
+[node name="TextBox" parent="." instance=ExtResource( 4 )]
+visible = false
+margin_left = -68.0
+margin_top = 30.0
+margin_right = 74.0
+margin_bottom = 78.0
+
+[node name="Panel" parent="TextBox" index="0"]
+margin_right = 142.0
+margin_bottom = 48.0
+
+[node name="Label" parent="TextBox" index="1"]
+margin_top = 16.0
+margin_right = 142.0
+margin_bottom = 32.0
+
+[editable path="TextBox"]

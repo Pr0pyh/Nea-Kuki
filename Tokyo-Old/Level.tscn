@@ -1,8 +1,9 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/CliffTileset.png" type="Texture" id=3]
+[ext_resource path="res://Camera/CameraPlayer.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -479,13 +480,8 @@ texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1457.96, 947.013 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="CameraPlayer" parent="." instance=ExtResource( 4 )]
 position = Vector2( 60, 47 )
-scale = Vector2( 0.5, 0.5 )
-current = true
-zoom = Vector2( 1.5, 1.5 )
-process_mode = 0
-smoothing_enabled = true
 
 [node name="CliffTilemap" type="TileMap" parent="."]
 tile_set = SubResource( 51 )
@@ -501,4 +497,4 @@ __meta__ = {
 speed = 70
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
-remote_path = NodePath("../../Camera2D")
+remote_path = NodePath("../../CameraPlayer")
