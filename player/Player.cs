@@ -4,6 +4,7 @@ using System;
 public class Player : KinematicBody2D
 {
     [Export] public int speed = 5;
+    [Export] public bool partner;
 
     public enum EVENT{
         MOVE,
@@ -19,6 +20,7 @@ public class Player : KinematicBody2D
     public Camera2D camera;
     public Sprite sprite;
     public Timer timer;
+    public player2 _player;
     public int health = 4;
     public int score = 0;
 
@@ -36,6 +38,8 @@ public class Player : KinematicBody2D
         animPlayer2 = this.GetNode<AnimationPlayer>("AnimationPlayer2");
         sprite = this.GetNode<Sprite>("Sprite");
         timer = this.GetNode<Timer>("Timer");
+        if(partner)
+            _player = this.GetParent().GetNode<player2>("Player2");
         Modulate = new Color(1.0f, 1.0f, 1.0f, 1.0f);
     }
 
@@ -93,6 +97,8 @@ public class Player : KinematicBody2D
             {
                 ((enemy)collision.Collider).destroy();
                 score++;
+                if(_player != null)
+                    _player.objectiveText("Skupila si sve vile", "Fali ti jos vila", score);
             }
         }
     }
