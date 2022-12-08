@@ -8,10 +8,12 @@ public class Door : Area2D
     // private string b = "text";
     [Export] public String level;
     [Export] public int objectiveScore;
+    public Sprite light;
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        
+        light = GetNode<Sprite>("Light");
+        light.Visible = false;
     }
 
     private void _on_Door_body_entered(PhysicsBody2D body)
@@ -19,6 +21,8 @@ public class Door : Area2D
         if(body.Name != "Player")
             return;
         if(((Player)body).score >= objectiveScore)
+        {
             GetTree().ChangeScene(level);
+        }
     }
 }

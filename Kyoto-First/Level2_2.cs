@@ -1,25 +1,24 @@
 using Godot;
 using System;
 
-public class Level1_2 : Node2D
+public class Level2_2 : Node2D
 {
     // Declare member variables here. Examples:
     // private int a = 2;
     // private string b = "text";
-
-    // Called when the node enters the scene tree for the first time.
-
     Player player;
-    SumoNPC sumoNPC;
-    Door door;
-
-    int needed_score = 1;
-    
+    player2 _player;
+    NPC teaMaster;
+    int needed_score = 3;
+    String[] animations = {"ACT1", "ACT2"};
+    // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
         player = GetNode<Player>("Player");
-        sumoNPC = GetNode<SumoNPC>("SumoNPC");
-        door = GetNode<Door>("Door");
+        teaMaster = GetNode<NPC>("TeaMaster");
+        _player = GetNode<player2>("Player2");
+        _player.objective = needed_score;
+        teaMaster.animations = animations;
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,8 +26,7 @@ public class Level1_2 : Node2D
     {
         if(player.score >= needed_score)
         {
-            sumoNPC.condition = true;
-            door.light.Visible = true;
+            teaMaster.condition = true;
         }
     }
 }

@@ -12,7 +12,8 @@ public class enemy : KinematicBody2D
         NOT_VISIBLE
     };
 
-    Area2D player2;
+    player2 _player;
+    Player player;
     Area2D collision_p2;
     EVENT state;
     AnimationPlayer deathAnim;
@@ -22,11 +23,12 @@ public class enemy : KinematicBody2D
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        player2 = this.GetParent().GetNode<Area2D>("Player2");
+        _player = this.GetParent().GetNode<player2>("Player2");
+        player = this.GetParent().GetNode<Player>("Player");
         sprite = this.GetNode<AnimatedSprite>("Sprite");
         enemySprite = this.GetNode<Sprite>("EnemySprite");
-        player2.Connect("body_entered", this, "_on_Collision_body_entered");
-        player2.Connect("body_exited", this, "_on_Collision_body_exited");
+        _player.Connect("body_entered", this, "_on_Collision_body_entered");
+        _player.Connect("body_exited", this, "_on_Collision_body_exited");
         deathAnim = this.GetNode<AnimationPlayer>("AnimationPlayer");
         state = EVENT.NOT_VISIBLE;
         sprite.Visible = true;
@@ -39,7 +41,7 @@ public class enemy : KinematicBody2D
         switch(state) 
         {
             case EVENT.VISIBLE:
-                Modulate = new Color(1, 1, 1, (255-(Position.DistanceTo(player2.Position)))/255);
+                Modulate = new Color(1, 1, 1, (255-(Position.DistanceTo(_player.Position)))/255);
                 break;
             case EVENT.NOT_VISIBLE:
                 Modulate = new Color(1, 1, 1, 0);
@@ -61,10 +63,13 @@ public class enemy : KinematicBody2D
     {
         if(Modulate > new Color(1, 1, 1, 0))
             deathAnim.Play("DeathAnimation");
+        GD.Print(player.score);
     }
 
     private void _on_AnimationPlayer_animation_finished(String animName)
     {
         QueueFree();
+        player.score++;
+        _player.objectiveText("Skupila si sve vile", "Fali ti jos vila", player.score);
     }
 }

@@ -96,9 +96,8 @@ public class Player : KinematicBody2D
             if(((Node2D)collision.Collider).IsInGroup("enemies"))
             {
                 ((enemy)collision.Collider).destroy();
-                score++;
-                if(_player != null)
-                    _player.objectiveText("Skupila si sve vile", "Fali ti jos vila", score);
+                // if(_player != null)
+                //     _player.objectiveText("Skupila si sve vile", "Fali ti jos vila", score);
             }
         }
     }

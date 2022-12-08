@@ -38,6 +38,7 @@ public class player2 : Area2D
         {
             case EVENT.MOVING:
                 Monitoring = false;
+                Monitorable = false;
                 collisionSprite.Visible = false;
                 Position = GetGlobalMousePosition();
                 if(Input.IsMouseButtonPressed((int)ButtonList.Left))
@@ -51,6 +52,7 @@ public class player2 : Area2D
                 break;
             case EVENT.LOOKING:
                 Monitoring = true;
+                Monitorable = true;
                 collisionSprite.Visible = true;
                 if(Input.IsMouseButtonPressed((int)ButtonList.Left))
                 {
