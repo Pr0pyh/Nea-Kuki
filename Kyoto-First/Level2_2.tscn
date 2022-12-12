@@ -831,6 +831,7 @@ texture = ExtResource( 13 )
 position = Vector2( 410, 141 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -843,6 +844,7 @@ texture = ExtResource( 14 )
 position = Vector2( 126, 415 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -855,6 +857,7 @@ texture = ExtResource( 14 )
 position = Vector2( 406, 272 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
