@@ -76,6 +76,6 @@ public class enemy : KinematicBody2D
     {
         QueueFree();
         player.score++;
-        _player.objectiveText("Skupila si sve vile", "Fali ti jos vila", player.score);
+        _player.objectiveText("You gathered all.", "You need more.", player.score);
     }
 }

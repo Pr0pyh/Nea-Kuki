@@ -1,43 +1,10 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Enemies/spritesheet (4).png" type="Texture" id=1]
+[ext_resource path="res://NPC/NPC.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://NPC/NPC.cs" type="Script" id=2]
 [ext_resource path="res://Music and Sounds/Menu Select.wav" type="AudioStream" id=3]
 [ext_resource path="res://World/enter.png" type="Texture" id=4]
 [ext_resource path="res://TextBox/MinimalUI.tres" type="Theme" id=5]
-
-[sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 27, 22 )
-
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 1 )
-region = Rect2( 27, 0, 27, 22 )
-
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 1 )
-region = Rect2( 54, 0, 27, 22 )
-
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 1 )
-region = Rect2( 81, 0, 27, 22 )
-
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 1 )
-region = Rect2( 108, 0, 27, 22 )
-
-[sub_resource type="SpriteFrames" id=7]
-animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "New Anim",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
 
 [sub_resource type="DynamicFontData" id=8]
 font_path = "res://Minecraft.ttf"
@@ -64,7 +31,8 @@ script = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 2, 2 )
-frames = SubResource( 7 )
+frames = ExtResource( 1 )
+frame = 3
 playing = true
 
 [node name="TextBox" type="MarginContainer" parent="."]
@@ -91,7 +59,7 @@ valign = 1
 position = Vector2( 176, 30 )
 scale = Vector2( 0.875, 0.895508 )
 frames = SubResource( 16 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionSpace" type="Area2D" parent="."]
