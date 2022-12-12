@@ -12,7 +12,7 @@ public class Player : KinematicBody2D
         HURT
     };
     public EVENT state = EVENT.MOVE;
-    public Vector2 velocity = new Vector2();
+    public Vector2 velocity = new Vector2(0.1f, 0.0f);
     public AnimationPlayer animPlayer;
     public AnimationPlayer animPlayer2;
     public AnimationTree animTree;
@@ -21,6 +21,8 @@ public class Player : KinematicBody2D
     public Sprite sprite;
     public Timer timer;
     public player2 _player;
+
+    Position2D startPos;
     public int health = 4;
     public int score = 0;
 
@@ -30,7 +32,7 @@ public class Player : KinematicBody2D
     public override void _Ready()
     {
         state = EVENT.MOVE;
-        camera = GetParent().GetNode<Camera2D>("CameraPlayer");
+        camera = GetParent().GetParent().GetNode<Camera2D>("CameraPlayer");
         animPlayer = this.GetNode<AnimationPlayer>("AnimationPlayer");
         animTree = this.GetNode<AnimationTree>("AnimationTree");
         animTree.Active = true;
@@ -39,7 +41,7 @@ public class Player : KinematicBody2D
         sprite = this.GetNode<Sprite>("Sprite");
         timer = this.GetNode<Timer>("Timer");
         if(partner)
-            _player = this.GetParent().GetNode<player2>("Player2");
+            _player = this.GetParent().GetParent().GetNode<player2>("Player2");
         Modulate = new Color(1.0f, 1.0f, 1.0f, 1.0f);
     }
 
@@ -51,6 +53,8 @@ public class Player : KinematicBody2D
                 move_state(delta);
                 break;
             case EVENT.STOP:
+                animTree.Set("parameters/Idle/blend_position", velocity);
+                animTree.Set("parameters/Run/blend_position", velocity);
                 break;
             case EVENT.HURT:
                 MoveAndSlide(velocity);
@@ -114,7 +118,9 @@ public class Player : KinematicBody2D
     public void inAnimationStop()
     {
         if(state == EVENT.STOP)
+        {
             animState.Travel("Idle");
+        }
     }
 
     private void _on_Director_animation_finished(String animName)
@@ -126,6 +132,16 @@ public class Player : KinematicBody2D
     private void _on_Director_animation_started(String animName)
     {
         state = EVENT.STOP;
+    }
+
+    private void _on_IntroExit_animation_started(String animName)
+    {
+        state = EVENT.STOP;
+    }
+
+    private void _on_IntroExit_animation_finished(String animName)
+    {
+        state = EVENT.MOVE;
     }
 
     private void _on_Hitbox_body_entered(Node body)
@@ -165,4 +181,6 @@ public class Player : KinematicBody2D
         invincible = false;
         state = EVENT.MOVE;
     }
+
+
 }

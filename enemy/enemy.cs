@@ -19,14 +19,18 @@ public class enemy : KinematicBody2D
     AnimationPlayer deathAnim;
     Sprite enemySprite;
     AnimatedSprite sprite;
+    CollisionShape2D collision2D;
+    public AudioStreamPlayer audioPlayer;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
         _player = this.GetParent().GetNode<player2>("Player2");
-        player = this.GetParent().GetNode<Player>("Player");
+        player = this.GetParent().GetNode<YSort>("YSort").GetNode<Player>("Player");
         sprite = this.GetNode<AnimatedSprite>("Sprite");
         enemySprite = this.GetNode<Sprite>("EnemySprite");
+        audioPlayer = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
+        collision2D = GetNode<CollisionShape2D>("CollisionShape2D");
         _player.Connect("body_entered", this, "_on_Collision_body_entered");
         _player.Connect("body_exited", this, "_on_Collision_body_exited");
         deathAnim = this.GetNode<AnimationPlayer>("AnimationPlayer");
@@ -61,8 +65,10 @@ public class enemy : KinematicBody2D
 
     public void destroy()
     {
+        collision2D.Disabled = true;
         if(Modulate > new Color(1, 1, 1, 0))
             deathAnim.Play("DeathAnimation");
+        audioPlayer.Play();
         GD.Print(player.score);
     }
 

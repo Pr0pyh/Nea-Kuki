@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://NPC/KendoNPC.cs" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Music and Sounds/Menu Select.wav" type="AudioStream" id=3]
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 2 )
@@ -58,6 +59,9 @@ valign = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionSpace"]
 position = Vector2( -0.5, -0.5 )
 shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 
 [connection signal="area_entered" from="CollisionSpace" to="." method="_on_CollisionSpace_area_entered"]
 [connection signal="body_entered" from="CollisionSpace" to="." method="_on_CollisionSpace_body_entered"]

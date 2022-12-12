@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://NPC/NPC.cs" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://TextBox/TextBox.tres" type="Theme" id=3]
+[ext_resource path="res://TextBox/MinimalUI.tres" type="Theme" id=3]
+[ext_resource path="res://Music and Sounds/Menu Select.wav" type="AudioStream" id=4]
 
 [sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 2 )
@@ -31,6 +32,7 @@ margin_left = -99.0
 margin_top = 15.0
 margin_right = 101.0
 margin_bottom = 61.0
+theme = ExtResource( 3 )
 
 [node name="Panel" type="Panel" parent="TextBox"]
 margin_right = 200.0
@@ -50,5 +52,8 @@ valign = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionSpace"]
 position = Vector2( -0.5, -0.5 )
 shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="body_entered" from="CollisionSpace" to="." method="_on_CollisionSpace_body_entered"]

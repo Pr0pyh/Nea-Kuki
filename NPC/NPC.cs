@@ -19,6 +19,7 @@ public class NPC : KinematicBody2D
     Area2D collisionSpace;
     String animName;
     AnimationPlayer animPlayer;
+    AudioStreamPlayer audioPlayer;
     int actNumber;
     [Export] public bool condition;
 
@@ -31,6 +32,7 @@ public class NPC : KinematicBody2D
         textBox = TextBox.GetNode<Label>("Label");
         collisionSpace = GetNode<Area2D>("CollisionSpace");
         animPlayer = GetParent().GetNode<AnimationPlayer>("Director");
+        audioPlayer = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
         collisionSpace.Monitoring = true;
         TextBox.Visible = false;
         condition = false;
@@ -39,26 +41,46 @@ public class NPC : KinematicBody2D
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
+    public override void _Process(float delta)
+    {
+        switch(state)
+        {
+            case EVENT.ANIMATION:
+                if(animPlayer.IsPlaying() == false)
+                    animPlayer.Play();
+                break;
+            case EVENT.NOT_IN_ANIMATION:
+                break;
+            case EVENT.STOP:
+                if(Input.IsActionPressed("ui_accept"))
+                {
+                    state = EVENT.ANIMATION;
+                    TextBox.Visible = false;
+                }
+                break;
+        }
+    }
     private void _on_CollisionSpace_body_entered(PhysicsBody2D body)
     {
         if(body.Name != "Player")
             return;
         if(condition == true || actNumber == 0)
         {
+            ((Player)body).velocity = new Vector2(1.0f, 0.5f);
             if(condition == true && actNumber != (animations.Length-1))
                 actNumber++;
+            state = EVENT.ANIMATION;
             animPlayer.Play(animations[actNumber]);
         }
     }
 
     public void insertText(String text)
     {
+        animPlayer.Stop(false);
+        state = EVENT.STOP;
         TextBox.Visible = true;
         textBox.Text = text;
+        audioPlayer.Play();
     }
 
     private void _on_Director_animation_finished(String animName)
@@ -67,7 +89,6 @@ public class NPC : KinematicBody2D
         {
             collisionSpace.Monitoring = false;
         }
-
-        TextBox.Visible = false;
+        state = EVENT.NOT_IN_ANIMATION;
     }
 }

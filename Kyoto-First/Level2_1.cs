@@ -10,18 +10,20 @@ public class Level2_1 : Node2D
     player2 _player;
     NPC teaMaster;
     Door door;
-    int needed_score = 3;
-
+    int needed_score = 5;
+    AnimationPlayer introExit;
     String[] animations = {"ACT1", "ACT2"};
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        player = GetNode<Player>("Player");
+        player = GetNode<YSort>("YSort").GetNode<Player>("Player");
         teaMaster = GetNode<NPC>("TeaMaster");
         _player = GetNode<player2>("Player2");
         door = GetNode<Door>("Door");
+        introExit = GetNode<AnimationPlayer>("IntroExit");
         _player.objective = needed_score;
         teaMaster.animations = animations;
+        introExit.Play("Entry");
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://enemy/enemy.cs" type="Script" id=1]
 [ext_resource path="res://Effects/HitEffect.png" type="Texture" id=2]
 [ext_resource path="res://Effects/EnemyDeathEffect.png" type="Texture" id=3]
+[ext_resource path="res://Music and Sounds/Unpause.wav" type="AudioStream" id=4]
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 2 )
@@ -135,5 +136,8 @@ shape = SubResource( 1 )
 reset_on_save = false
 anims/DeathAnimation = SubResource( 2 )
 anims/RESET = SubResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

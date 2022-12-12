@@ -19,6 +19,7 @@ public class SumoNPC : KinematicBody2D
     Area2D collisionSpace;
     String animName;
     AnimationPlayer animPlayer;
+    AudioStreamPlayer audioPlayer;
     int actNumber;
     public bool condition;
 
@@ -30,6 +31,7 @@ public class SumoNPC : KinematicBody2D
         TextBox = GetNode<MarginContainer>("TextBox");
         textBox = TextBox.GetNode<Label>("Label");
         collisionSpace = GetNode<Area2D>("CollisionSpace");
+        audioPlayer = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
         collisionSpace.Monitoring = true;
         TextBox.Visible = false;
         actNumber = 0;
@@ -41,6 +43,23 @@ public class SumoNPC : KinematicBody2D
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
+        switch(state)
+        {
+            case EVENT.ANIMATION:
+                if(animPlayer.IsPlaying() == false)
+                    animPlayer.Play();
+                break;
+            case EVENT.NOT_IN_ANIMATION:
+                break;
+            case EVENT.STOP:
+                if(Input.IsActionPressed("ui_accept"))
+                {
+                    state = EVENT.ANIMATION;
+                    TextBox.Visible = false;
+                }
+                break;
+        }
+
         if(condition == true)
             Position = new Vector2(-86.0f, 298.0f);
     }
@@ -48,27 +67,36 @@ public class SumoNPC : KinematicBody2D
     {
         if(body.Name != "Player")
             return;
-        if(condition == true || actNumber == 0)
-            animPlayer.Play(animations[actNumber]);
+        ((Player)body).velocity = new Vector2(-1.0f, 0.5f);
+        if(condition == true && actNumber != (animations.Length-1))
+            actNumber++;
+        state = EVENT.ANIMATION;
+        animPlayer.Play(animations[actNumber]);
     }
 
     public void insertText(String text)
     {
+        animPlayer.Stop(false);
+        state = EVENT.STOP;
         TextBox.Visible = true;
         textBox.Text = text;
+        audioPlayer.Play();
     }
 
     private void _on_Director_animation_finished(String animName)
     {
-        if(animations[animations.Length - 1] == animName)
+        // if(animations[animations.Length - 1] == animName)
+        // {
+        //     collisionSpace.Monitoring = false;
+        // }
+        // else
+        // {
+        //     actNumber++;
+        // }
+        if(animations[animations.Length - 1] == animName && condition == true)
         {
             collisionSpace.Monitoring = false;
         }
-        else
-        {
-            actNumber++;
-        }
-
-        TextBox.Visible = false;
+        state = EVENT.NOT_IN_ANIMATION;
     }
 }

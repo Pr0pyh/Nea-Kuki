@@ -383,6 +383,7 @@ script = ExtResource( 9 )
 environment = SubResource( 53 )
 
 [node name="Background" type="Sprite" parent="."]
+self_modulate = Color( 0.584314, 0.243137, 1, 1 )
 position = Vector2( 232, 266 )
 texture = ExtResource( 8 )
 region_enabled = true
