@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "InvitationItem",
 "language": "GDScript",
 "path": "res://addons/github-integration/scripts/InvitationItem.gd"
+}, {
+"base": "PanelContainer",
+"class": "RepositoryItem",
+"language": "GDScript",
+"path": "res://addons/github-integration/scripts/RepositoryItem.gd"
 } ]
 _global_script_class_icons={
 "ContributorClass": "",
 "GistItem": "",
-"InvitationItem": ""
+"InvitationItem": "",
+"RepositoryItem": ""
 }
 
 [application]
@@ -38,9 +44,10 @@ config/icon="res://icon.png"
 
 [autoload]
 
-UserData="*res://addons/github-integration/scripts/user_data.gd"
+PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
-RestHandler="*res://addons/github-integration/scripts/RestHandler.gd"
+UserData="*res://addons/github-integration/scripts/user_data.gd"
+RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
 
 [display]
 
@@ -58,7 +65,6 @@ enabled=PoolStringArray( "res://addons/github-integration/plugin.cfg" )
 
 ex=false
 enviroment=false
-asset=false
 
 [gui]
 

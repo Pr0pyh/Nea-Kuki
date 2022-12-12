@@ -9,6 +9,7 @@ public class CameraPlayer : Camera2D
 
     Position2D topLeft;
     Position2D bottomRight;
+
     Position2D startPos;
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://World/CliffTileset.png" type="Texture" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://Music and Sounds/Music.mp3" type="AudioStream" id=6]
 [ext_resource path="res://enemy_moving/enemy_moving.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Door/Door.tscn" type="PackedScene" id=8]
-[ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=9]
 [ext_resource path="res://TokyoNew/Level4_2.cs" type="Script" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=61]
@@ -543,16 +542,6 @@ margin_bottom = 456.0
 __meta__ = {
 "_edit_use_anchors_": true
 }
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
-
-[node name="PauseMenu" parent="CanvasLayer2" instance=ExtResource( 9 )]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-margin_left = -160.0
-margin_top = -180.0
-margin_right = 160.0
 
 [connection signal="animation_finished" from="IntroExit" to="YSort/Player" method="_on_IntroExit_animation_finished"]
 [connection signal="animation_finished" from="IntroExit" to="Door" method="_on_IntroExit_animation_finished"]

@@ -15,7 +15,6 @@
 [ext_resource path="res://World/pink tree.png" type="Texture" id=13]
 [ext_resource path="res://Shadows/MediumShadow.png" type="Texture" id=14]
 [ext_resource path="res://Shadows/LargeShadow.png" type="Texture" id=15]
-[ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=16]
 
 [sub_resource type="AtlasTexture" id=56]
 atlas = ExtResource( 13 )
@@ -66,7 +65,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 2, 8, 9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1.5, 1.5 ) ]
+"values": [ Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ) ]
 }
 tracks/2/type = "method"
 tracks/2/path = NodePath("YSort/Player")
@@ -230,6 +229,21 @@ tracks/5/keys = {
 "values": [ Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ) ]
 }
 
+[sub_resource type="Animation" id=63]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("YSort/Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 195, 91 ) ]
+}
+
 [sub_resource type="Animation" id=61]
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/Panel:modulate")
@@ -387,7 +401,7 @@ texture = ExtResource( 14 )
 position = Vector2( 162, 277 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
-frame = 2
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -400,7 +414,7 @@ texture = ExtResource( 15 )
 position = Vector2( 758, 156 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
-frame = 2
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -413,7 +427,6 @@ texture = ExtResource( 15 )
 position = Vector2( 577, 495 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
-frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -433,6 +446,7 @@ scale = Vector2( 0.5, 0.5 )
 reset_on_save = false
 anims/ACT1 = SubResource( 1 )
 anims/ACT2 = SubResource( 55 )
+anims/RESET = SubResource( 63 )
 
 [node name="IntroExit" type="AnimationPlayer" parent="."]
 reset_on_save = false
@@ -491,16 +505,6 @@ margin_bottom = 456.0
 __meta__ = {
 "_edit_use_anchors_": true
 }
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
-
-[node name="PauseMenu" parent="CanvasLayer2" instance=ExtResource( 16 )]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-margin_left = -160.0
-margin_top = -180.0
-margin_right = 160.0
 
 [connection signal="animation_finished" from="Director" to="YSort/Player" method="_on_Director_animation_finished"]
 [connection signal="animation_finished" from="Director" to="Player2" method="_on_Director_animation_finished"]

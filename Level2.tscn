@@ -97,6 +97,7 @@ region_rect = Rect2( 0, 0, 1068.71, 701.537 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 59, 82 )
+scale = Vector2( 0.5, 0.5 )
 current = true
 zoom = Vector2( 1.5, 1.5 )
 process_mode = 0
@@ -108,7 +109,6 @@ tile_data = PoolIntArray( -65532, 0, 4, -65531, 0, 196609, -65530, 0, 196609, -6
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 59, 82 )
 script = ExtResource( 1 )
-speed = 100
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")

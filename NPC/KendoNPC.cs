@@ -66,7 +66,7 @@ public class KendoNPC : KinematicBody2D
     }
     private void _on_CollisionSpace_body_entered(PhysicsBody2D body)
     {
-        if(body.Name != "Player" || animPlayer2.IsPlaying() == true)
+        if(body.Name != "Player")
         {
             GD.Print(body.Name);
             return;
@@ -86,14 +86,14 @@ public class KendoNPC : KinematicBody2D
 
     private void _on_CollisionSpace_area_entered(Area2D area)
     {
-        if(area.Name != "Player2" || animPlayer.IsPlaying() == true)
+        if(area.Name != "Player2")
         {
             return;
         }
         if(condition == true || actNumber == 0)
         {
             animPlayer2.Play(animations[shadowActNumber]);
-            if(condition == true && shadowActNumber != (animations2.Length-1))
+            if(condition == true)
                 shadowActNumber++;
         }
     }

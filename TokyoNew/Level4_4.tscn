@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://World/tilesets/CliffTileMap.tres" type="TileSet" id=1]
 [ext_resource path="res://Camera/CameraPlayer.tscn" type="PackedScene" id=2]
@@ -7,9 +7,8 @@
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=5]
 [ext_resource path="res://Music and Sounds/X2Download.app - 16-Bit Fantasy RPG OST - Nocturne (Night_Camping Music) (128 kbps).mp3" type="AudioStream" id=6]
 [ext_resource path="res://NPC/Worker.tscn" type="PackedScene" id=7]
-[ext_resource path="res://TextBox/MinimalUI.tres" type="Theme" id=8]
+[ext_resource path="res://TextBox/TextBox.tres" type="Theme" id=8]
 [ext_resource path="res://Music and Sounds/Swipe.wav" type="AudioStream" id=9]
-[ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=10]
 
 [sub_resource type="Gradient" id=59]
 offsets = PoolRealArray( 0, 0.00657895, 0.0131579, 1 )
@@ -165,12 +164,11 @@ margin_left = -284.0
 margin_top = -252.0
 margin_right = -102.0
 margin_bottom = 50.0
-theme = ExtResource( 8 )
 
 [node name="Label" type="Label" parent="YSort/Player/MarginContainer"]
-margin_top = 143.0
+margin_top = 144.0
 margin_right = 182.0
-margin_bottom = 159.0
+margin_bottom = 158.0
 theme = ExtResource( 8 )
 text = "with honors"
 
@@ -204,16 +202,6 @@ autostart = true
 reset_on_save = false
 anims/CREDITS = SubResource( 62 )
 anims/RESET = SubResource( 63 )
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
-
-[node name="PauseMenu" parent="CanvasLayer2" instance=ExtResource( 10 )]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-margin_left = -160.0
-margin_top = -180.0
-margin_right = 160.0
 
 [connection signal="body_entered" from="Trigger" to="." method="_on_Trigger_body_entered"]
 [connection signal="body_entered" from="Trigger" to="CameraPlayer" method="_on_Trigger_body_entered"]

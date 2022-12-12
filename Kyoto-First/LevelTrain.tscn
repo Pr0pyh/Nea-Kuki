@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=1]
 [ext_resource path="res://World/CliffTileset.png" type="Texture" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://ShadowTilemap.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Kyoto-First/LevelTrain.cs" type="Script" id=8]
 [ext_resource path="res://Music and Sounds/Music.mp3" type="AudioStream" id=9]
-[ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -704,16 +703,6 @@ margin_bottom = 456.0
 __meta__ = {
 "_edit_use_anchors_": true
 }
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
-
-[node name="PauseMenu" parent="CanvasLayer2" instance=ExtResource( 10 )]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-margin_left = -160.0
-margin_top = -180.0
-margin_right = 160.0
 
 [connection signal="animation_finished" from="Director" to="YSort/Player" method="_on_Director_animation_finished"]
 [connection signal="animation_finished" from="Director" to="NPC" method="_on_Director_animation_finished"]
