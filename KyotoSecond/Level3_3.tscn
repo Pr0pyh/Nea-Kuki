@@ -823,7 +823,7 @@ anims/Exit = SubResource( 66 )
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 643, 78 )
-level = "res://TokyoNew/Level4_1.tscn"
+level = "res://TokyoNew/Level4_0.tscn"
 
 [node name="enemy_moving" parent="." instance=ExtResource( 8 )]
 position = Vector2( 249, 559 )

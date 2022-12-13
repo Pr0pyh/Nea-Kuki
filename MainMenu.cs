@@ -15,6 +15,6 @@ public class MainMenu : Control
 
     private void _on_Button_pressed()
     {
-        GetTree().ChangeScene("res://Tokyo-Old/Level1_1.tscn");
+        GetTree().ChangeScene("res://Tokyo-Old/Level1_0.tscn");
     }
 }

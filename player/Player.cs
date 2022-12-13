@@ -5,6 +5,7 @@ public class Player : KinematicBody2D
 {
     [Export] public int speed = 5;
     [Export] public bool partner;
+    [Export] public bool horizontalInputOnly;
 
     public enum EVENT{
         MOVE,
@@ -21,6 +22,7 @@ public class Player : KinematicBody2D
     public Sprite sprite;
     public Timer timer;
     public player2 _player;
+    Color newModulate;
 
     Position2D startPos;
     public int health = 4;
@@ -40,6 +42,7 @@ public class Player : KinematicBody2D
         animPlayer2 = this.GetNode<AnimationPlayer>("AnimationPlayer2");
         sprite = this.GetNode<Sprite>("Sprite");
         timer = this.GetNode<Timer>("Timer");
+        newModulate = Modulate;
         if(partner)
             _player = this.GetParent().GetParent().GetNode<player2>("Player2");
         Modulate = new Color(1.0f, 1.0f, 1.0f, 1.0f);
@@ -72,10 +75,10 @@ public class Player : KinematicBody2D
         if (Input.IsActionPressed("move_left"))
             input_vector.x -= 1;
 
-        if (Input.IsActionPressed("down"))
+        if (Input.IsActionPressed("down") && !horizontalInputOnly)
             input_vector.y += 1;
 
-        if (Input.IsActionPressed("up"))
+        if (Input.IsActionPressed("up") && !horizontalInputOnly)
             input_vector.y -= 1;
             
 
@@ -180,6 +183,10 @@ public class Player : KinematicBody2D
         animPlayer2.Stop();
         invincible = false;
         state = EVENT.MOVE;
+        newModulate.g -= 0.2f;
+        newModulate.b -= 0.2f;
+        GD.Print(newModulate);
+        Modulate = newModulate;
     }
 
 
