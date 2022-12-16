@@ -25,6 +25,7 @@ public class Player : KinematicBody2D
     Color newModulate;
 
     Position2D startPos;
+    bool android = true;
     public int health = 4;
     public int score = 0;
 
@@ -53,7 +54,10 @@ public class Player : KinematicBody2D
         switch(state) 
         {
             case EVENT.MOVE:
-                move_state(delta);
+                if(android == false)
+                    move_state(delta);
+                else
+                    MoveAndSlide(velocity * speed);
                 break;
             case EVENT.STOP:
                 animTree.Set("parameters/Idle/blend_position", velocity);
