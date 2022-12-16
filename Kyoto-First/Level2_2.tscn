@@ -831,7 +831,7 @@ texture = ExtResource( 13 )
 position = Vector2( 410, 141 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
-frame = 1
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -844,7 +844,7 @@ texture = ExtResource( 14 )
 position = Vector2( 126, 415 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
-frame = 1
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -857,7 +857,7 @@ texture = ExtResource( 14 )
 position = Vector2( 406, 272 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
-frame = 1
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -895,12 +895,15 @@ anims/Exit = SubResource( 63 )
 [node name="Enemy2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 36, 165 )
 scale = Vector2( 0.25, 0.25 )
+information = "..."
 
 [node name="Enemy" parent="." instance=ExtResource( 10 )]
 position = Vector2( 124, 432 )
+information = "I hope he will achieve perfection"
 
 [node name="Enemy3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 465, 433 )
+information = "I feel bad for him..."
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )

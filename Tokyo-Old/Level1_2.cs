@@ -21,7 +21,7 @@ public class Level1_2 : Node2D
 		sumoNPC = GetNode<SumoNPC>("SumoNPC");
 		door = GetNode<Door>("Door");
 		introExit = GetNode<AnimationPlayer>("IntroExit");
-		introExit.Play("Entry");
+		// introExit.Play("Entry");
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -18,7 +18,7 @@ script = ExtResource( 2 )
 
 [node name="Spriteplayer" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -45,15 +45,13 @@ margin_right = 82.0
 margin_bottom = 13.0
 custom_fonts/font = SubResource( 8 )
 
-[node name="AnimatedSprite" parent="TextBox" index="2"]
-frame = 1
-
 [node name="ObjectiveTimer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 4.0
 one_shot = true
 
 [node name="InteractiveTimer" type="Timer" parent="."]
 wait_time = 2.0
+one_shot = true
 
 [connection signal="timeout" from="ObjectiveTimer" to="." method="_on_ObjectiveTimer_timeout"]
 [connection signal="timeout" from="InteractiveTimer" to="." method="_on_InteractiveTimer_timeout"]

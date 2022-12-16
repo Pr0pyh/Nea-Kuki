@@ -87,7 +87,6 @@ public class player2 : Area2D
     {
         TextBox.Visible = true;
         textBox.Text = text;
-        talkingState = true;
         interactiveTimer.Start();
     }
 

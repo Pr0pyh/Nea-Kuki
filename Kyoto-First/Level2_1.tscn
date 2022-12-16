@@ -402,7 +402,7 @@ texture = ExtResource( 14 )
 position = Vector2( 162, 277 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -415,7 +415,7 @@ texture = ExtResource( 15 )
 position = Vector2( 758, 156 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -428,7 +428,6 @@ texture = ExtResource( 15 )
 position = Vector2( 577, 495 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
-frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -457,29 +456,35 @@ anims/Exit = SubResource( 62 )
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 391, 67 )
-information = "\"ne radi\""
+information = "That is the leaves we need."
 
 [node name="Enemy2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 575, 66 )
+information = "We get tea by heating leaves we gathered..."
 
 [node name="Enemy3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 16, 243 )
-information = "\"jasno\""
+information = "Tea master seems insecure..."
 
 [node name="Enemy4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 81, 427 )
+information = "Green tea is in fact like coffee, but way more healthy."
 
 [node name="Enemy5" parent="." instance=ExtResource( 3 )]
 position = Vector2( 783, 221 )
+information = "After heating, we must bend leaves. "
 
 [node name="Enemy6" parent="." instance=ExtResource( 3 )]
 position = Vector2( 318, 304 )
+information = "..."
 
 [node name="Enemy7" parent="." instance=ExtResource( 3 )]
 position = Vector2( 387, 527 )
+information = "I was thinking that we need way less leaves"
 
 [node name="Enemy8" parent="." instance=ExtResource( 3 )]
 position = Vector2( 784, 454 )
+information = "I am getting tired of this..."
 
 [node name="Door" parent="." instance=ExtResource( 7 )]
 position = Vector2( 241, -46 )

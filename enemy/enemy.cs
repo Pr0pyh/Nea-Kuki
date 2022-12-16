@@ -8,6 +8,7 @@ public class enemy : KinematicBody2D
     // private string b = "text";
 
     [Export] String information;
+    int countInformation;
 
     enum EVENT {
         VISIBLE,
@@ -58,7 +59,8 @@ public class enemy : KinematicBody2D
     private void _on_Collision_body_entered(Node body)
     {
         this.state = EVENT.VISIBLE;
-        _player.informationText(information);
+        if(Position.DistanceTo(_player.Position) < 30)
+            _player.informationText(information);
     }
 
     public void _on_Collision_body_exited(Node body)
@@ -68,10 +70,12 @@ public class enemy : KinematicBody2D
 
     public void destroy()
     {
-        collision2D.Disabled = true;
         if(Modulate > new Color(1, 1, 1, 0))
+        {
+            collision2D.Disabled = true;
             deathAnim.Play("DeathAnimation");
-        audioPlayer.Play();
+            audioPlayer.Play();
+        }
         GD.Print(player.score);
     }
 

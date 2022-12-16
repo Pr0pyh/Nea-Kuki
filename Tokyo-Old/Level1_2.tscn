@@ -833,15 +833,18 @@ position = Vector2( 37, 144 )
 [node name="Enemy2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 512, 352 )
 scale = Vector2( 0.25, 0.25 )
+information = "radi"
 
 [node name="SumoFighter" parent="." instance=ExtResource( 4 )]
 position = Vector2( 175, 76 )
 
 [node name="AnimatedSprite" parent="SumoFighter" index="0"]
 position = Vector2( 0, 8 )
+frame = 3
 
 [node name="HitEffect" parent="SumoFighter" index="1"]
 position = Vector2( -74, 18 )
+frame = 1
 
 [node name="CollisionShape2D" parent="SumoFighter" index="2"]
 position = Vector2( -74, 20 )
