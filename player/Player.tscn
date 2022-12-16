@@ -478,6 +478,7 @@ one_shot = true
 stream = ExtResource( 4 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Joystick" parent="CanvasLayer" instance=ExtResource( 6 )]
 

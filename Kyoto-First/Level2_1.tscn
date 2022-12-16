@@ -457,12 +457,14 @@ anims/Exit = SubResource( 62 )
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 391, 67 )
+information = "\"ne radi\""
 
 [node name="Enemy2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 575, 66 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 16, 243 )
+information = "\"jasno\""
 
 [node name="Enemy4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 81, 427 )

@@ -7,6 +7,8 @@ public class enemy : KinematicBody2D
     // private int a = 2;
     // private string b = "text";
 
+    [Export] String information;
+
     enum EVENT {
         VISIBLE,
         NOT_VISIBLE
@@ -56,6 +58,7 @@ public class enemy : KinematicBody2D
     private void _on_Collision_body_entered(Node body)
     {
         this.state = EVENT.VISIBLE;
+        _player.informationText(information);
     }
 
     public void _on_Collision_body_exited(Node body)
@@ -76,6 +79,9 @@ public class enemy : KinematicBody2D
     {
         QueueFree();
         player.score++;
-        _player.objectiveText("You gathered all.", "You need more.", player.score);
+        if(_player.talkingState == false)
+            _player.objectiveText("You gathered all.", "You need more.", player.score);
+        else
+            _player.objectiveText("Ok, interrupt me. You gathered all", "You need more. And wait me finish", player.score);
     }
 }

@@ -17,7 +17,9 @@ public class player2 : Area2D
     MarginContainer TextBox;
     Label textBox;
     Timer objectiveTimer;
+    Timer interactiveTimer;
     public int objective;
+    public bool talkingState;
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
@@ -25,6 +27,7 @@ public class player2 : Area2D
         TextBox = GetNode<MarginContainer>("TextBox");
         textBox = TextBox.GetNode<Label>("Label");
         objectiveTimer = GetNode<Timer>("ObjectiveTimer");
+        interactiveTimer = GetNode<Timer>("InteractiveTimer");
         Monitoring = false;
         collisionSprite.Visible = false;
         TextBox.Visible = false;
@@ -80,6 +83,14 @@ public class player2 : Area2D
         objectiveTimer.Start();
     }
 
+    public void informationText(String text)
+    {
+        TextBox.Visible = true;
+        textBox.Text = text;
+        talkingState = true;
+        interactiveTimer.Start();
+    }
+
     public void insertText(String text)
     {
         TextBox.Visible = true;
@@ -100,5 +111,11 @@ public class player2 : Area2D
     private void _on_ObjectiveTimer_timeout()
     {
         TextBox.Visible = false;
+    }
+
+    private void _on_InteractiveTimer_timeout()
+    {
+        TextBox.Visible = false;
+        talkingState = false;
     }
 }

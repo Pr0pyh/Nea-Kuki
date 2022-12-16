@@ -25,7 +25,7 @@ public class Player : KinematicBody2D
     Color newModulate;
 
     Position2D startPos;
-    bool android = true;
+    [Export] bool android = false;
     public int health = 4;
     public int score = 0;
 

@@ -3,7 +3,7 @@ using System;
 
 public class Level1_0 : Node2D
 {
-    // Declare member variables here. Examples:
+	// Declare member variables here. Examples:
 	// private int a = 2;
 	// private string b = "text";
 	Player player;
