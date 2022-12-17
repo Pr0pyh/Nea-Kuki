@@ -56,7 +56,7 @@ public class KendoNPC : KinematicBody2D
             case EVENT.NOT_IN_ANIMATION:
                     break;
             case EVENT.STOP:
-                    if(Input.IsActionPressed("ui_accept"))
+                    if(Input.IsActionPressed("ui_accept") && !animPlayer2.IsPlaying())
                     {
                         state = EVENT.ANIMATION;
                         TextBox.Visible = false;
@@ -92,9 +92,9 @@ public class KendoNPC : KinematicBody2D
         }
         if(condition == true || actNumber == 0)
         {
-            animPlayer2.Play(animations[shadowActNumber]);
-            if(condition == true)
+            if(condition == true && shadowActNumber != (animations2.Length - 1))
                 shadowActNumber++;
+            animPlayer2.Play(animations2[shadowActNumber]);
         }
     }
 
@@ -118,10 +118,6 @@ public class KendoNPC : KinematicBody2D
 
     private void _on_ShadowDirector_animation_finished(String animName)
     {
-        if(animations2[animations2.Length - 1] == animName && condition == true)
-        {
-            TextBox.Visible = false;
-        }
-
+        TextBox.Visible = false;
     }
 }

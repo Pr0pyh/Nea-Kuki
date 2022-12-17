@@ -32,7 +32,7 @@ script = ExtResource( 2 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 2, 2 )
 frames = ExtResource( 1 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="TextBox" type="MarginContainer" parent="."]
@@ -59,7 +59,7 @@ valign = 1
 position = Vector2( 176, 30 )
 scale = Vector2( 0.875, 0.895508 )
 frames = SubResource( 16 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionSpace" type="Area2D" parent="."]
