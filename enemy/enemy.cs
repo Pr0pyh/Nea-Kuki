@@ -39,7 +39,7 @@ public class enemy : KinematicBody2D
         deathAnim = this.GetNode<AnimationPlayer>("AnimationPlayer");
         state = EVENT.NOT_VISIBLE;
         sprite.Visible = true;
-        enemySprite.Visible = false;
+        enemySprite.Visible = true;
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.

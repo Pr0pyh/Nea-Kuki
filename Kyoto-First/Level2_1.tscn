@@ -617,7 +617,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 2, 8, 9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ) ]
+"values": [ Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1.5, 1.5 ) ]
 }
 tracks/2/type = "method"
 tracks/2/path = NodePath("YSort/Player")
@@ -963,10 +963,10 @@ position = Vector2( 186, 96 )
 zoom = Vector2( 1.5, 1.5 )
 
 [node name="TopLeft" parent="CameraPlayer/Node" index="0"]
-position = Vector2( -32, -92 )
+position = Vector2( -71, -116 )
 
 [node name="BottomRight" parent="CameraPlayer/Node" index="1"]
-position = Vector2( 862, 577 )
+position = Vector2( 917, 637 )
 
 [node name="TileMap2" type="TileMap" parent="."]
 position = Vector2( 210, 299 )
@@ -999,6 +999,7 @@ remote_path = NodePath("../../../CameraPlayer")
 position = Vector2( 162, 277 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1011,6 +1012,7 @@ texture = ExtResource( 15 )
 position = Vector2( 758, 156 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1023,7 +1025,7 @@ texture = ExtResource( 15 )
 position = Vector2( 577, 495 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 

@@ -11,7 +11,7 @@ public class Level3_1 : Node2D
 	KendoNPC kendoMaster;
 	Door door;
 	AnimationPlayer introExit;
-	int needed_score = 0;
+	int needed_score = 1;
 	String[] animations = {"ACT1"};
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()

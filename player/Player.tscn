@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://player/player1.png" type="Texture" id=1]
 [ext_resource path="res://Hitbox/Hitbox.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Music and Sounds/Evade.wav" type="AudioStream" id=4]
 [ext_resource path="res://Music and Sounds/Hurt.wav" type="AudioStream" id=5]
 [ext_resource path="res://player/Joystick.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Kuki/Kuki.tscn" type="PackedScene" id=7]
 
 [sub_resource type="CSharpScript" id=1]
 script/source = "using Godot;
@@ -481,6 +482,10 @@ stream = ExtResource( 4 )
 visible = false
 
 [node name="Joystick" parent="CanvasLayer" instance=ExtResource( 6 )]
+
+[node name="Kuki" parent="." instance=ExtResource( 7 )]
+position = Vector2( 20, 0 )
+scale = Vector2( 0.5, 0.5 )
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_Hitbox_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_Hitbox_body_entered"]

@@ -10,7 +10,7 @@
 [ext_resource path="res://World/lamp.png" type="Texture" id=8]
 [ext_resource path="res://World/light.png" type="Texture" id=9]
 [ext_resource path="res://Tokyo-Old/post_procesing.tres" type="Environment" id=10]
-[ext_resource path="res://Music and Sounds/Music.mp3" type="AudioStream" id=11]
+[ext_resource path="res://Music and Sounds/Theme.mp3" type="AudioStream" id=11]
 [ext_resource path="res://ShadowTilemap.tscn" type="PackedScene" id=12]
 [ext_resource path="res://World/spritesheet 2.png" type="Texture" id=13]
 [ext_resource path="res://World/spritesheet 2 blurred.png" type="Texture" id=14]
@@ -529,7 +529,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -548,7 +548,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
-frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -567,7 +566,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
-frame = 1
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -586,7 +585,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
-frame = 1
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
