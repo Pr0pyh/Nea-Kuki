@@ -11,9 +11,17 @@ public class Kuki : KinematicBody2D
     };
 
     EVENT state;
-    Vector2 velocity;
+    public AnimationPlayer animPlayer;
+    public AnimationTree animTree;
+    public AnimationNodeStateMachinePlayback animState;
+    public Vector2 velocity;
     public override void _Ready()
     {
+        animPlayer = this.GetNode<AnimationPlayer>("AnimationPlayer");
+        animTree = this.GetNode<AnimationTree>("AnimationTree");
+        animTree.Active = true;
+        animState = (AnimationNodeStateMachinePlayback)animTree.Get("parameters/playback");
+        GD.Print(velocity);
         state = EVENT.MOVE;
     }
 
@@ -26,7 +34,7 @@ public class Kuki : KinematicBody2D
                 moveState(delta);
                 break;
             case EVENT.FINDING:
-                findingState();
+                animState.Travel("Idle");
                 break;
         }
     }
@@ -49,23 +57,27 @@ public class Kuki : KinematicBody2D
             
 
         input_vector = input_vector.Normalized();
-
-        // if(input_vector != Vector2.Zero)
-        // {
-        //     animTree.Set("parameters/Idle/blend_position", velocity);
-        //     animTree.Set("parameters/Run/blend_position", velocity);
-        //     animState.Travel("Run");
-        // }
-        // else
-        // {
-        //     animState.Travel("Idle");
-        // }
+        if(velocity != Vector2.Zero)
+        {
+            animTree.Set("parameters/Idle/blend_position", velocity);
+            animTree.Set("parameters/Run/blend_position", velocity);
+            animState.Travel("Run");
+        }
+        else
+        {
+            animState.Travel("Idle");
+        }
         velocity = input_vector*speed;
-        velocity = MoveAndSlide(velocity);
+        // velocity = MoveAndSlide(velocity);
     }
 
-    void findingState()
+    private void _on_Director_animation_finished(String animName)
     {
-        
+        state = EVENT.MOVE;
+    }
+
+    private void _on_Director_animation_started(String animName)
+    {
+        state = EVENT.FINDING;
     }
 }

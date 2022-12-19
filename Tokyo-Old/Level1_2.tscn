@@ -697,18 +697,18 @@ information = "radi"
 
 [node name="Sprite" parent="Enemy2" index="1"]
 frames = ExtResource( 18 )
-frame = 0
+frame = 4
 
 [node name="SumoFighter" parent="." instance=ExtResource( 4 )]
 position = Vector2( 175, 76 )
 
 [node name="AnimatedSprite" parent="SumoFighter" index="0"]
 position = Vector2( 0, 8 )
-frame = 2
+frame = 0
 
 [node name="HitEffect" parent="SumoFighter" index="1"]
 position = Vector2( -74, 18 )
-frame = 0
+frame = 2
 
 [node name="CollisionShape2D" parent="SumoFighter" index="2"]
 position = Vector2( -74, 20 )

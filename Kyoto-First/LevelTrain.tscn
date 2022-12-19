@@ -480,7 +480,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="Animation" id=52]
 resource_name = "ACT1"
-length = 8.0
+length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/Player:position")
 tracks/0/interp = 1
@@ -526,8 +526,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 1.5, 3, 4.1, 7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 1.5, 3, 4.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "values": [ {
 "args": [ "Nea, we are near Kyoto." ],
 "method": "insertText"
@@ -539,9 +539,6 @@ tracks/3/keys = {
 "method": "insertText"
 }, {
 "args": [ "We will for sure find more Yusei..." ],
-"method": "insertText"
-}, {
-"args": [ "...and Kuki..." ],
 "method": "insertText"
 } ]
 }

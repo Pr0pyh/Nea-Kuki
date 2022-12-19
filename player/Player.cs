@@ -25,6 +25,7 @@ public class Player : KinematicBody2D
     Color newModulate;
 
     Position2D startPos;
+    Kuki kuki;
     [Export] bool android = false;
     public int health = 4;
     public int score = 0;
@@ -43,6 +44,7 @@ public class Player : KinematicBody2D
         animPlayer2 = this.GetNode<AnimationPlayer>("AnimationPlayer2");
         sprite = this.GetNode<Sprite>("Sprite");
         timer = this.GetNode<Timer>("Timer");
+        kuki = GetNode<Kuki>("Kuki");
         newModulate = Modulate;
         if(partner)
             _player = this.GetParent().GetParent().GetNode<player2>("Player2");
@@ -99,6 +101,7 @@ public class Player : KinematicBody2D
             animState.Travel("Idle");
         }
         velocity = input_vector*speed;
+        kuki.velocity = velocity;
         velocity = MoveAndSlide(velocity);
 
         for(int i = 0; i<GetSlideCount(); i++)
