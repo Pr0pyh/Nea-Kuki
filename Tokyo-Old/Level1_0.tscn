@@ -499,7 +499,7 @@ region_enabled = true
 region_rect = Rect2( 0, 64.9831, 1510.66, 692.173 )
 
 [node name="CameraPlayer" parent="." instance=ExtResource( 4 )]
-position = Vector2( 20, 92 )
+position = Vector2( 68, 91 )
 zoom = Vector2( 3, 3 )
 
 [node name="TopLeft" parent="CameraPlayer/Node" index="0"]
@@ -529,7 +529,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
-frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -548,6 +547,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -566,7 +566,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
-frame = 3
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -585,7 +585,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
-frame = 3
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -600,7 +600,7 @@ script = ExtResource( 16 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 20, 92 )
+position = Vector2( 68, 91 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -689,6 +689,7 @@ anims/Exit = SubResource( 56 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 
