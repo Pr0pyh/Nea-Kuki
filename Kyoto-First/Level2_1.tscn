@@ -1,4 +1,4 @@
-[gd_scene load_steps=131 format=2]
+[gd_scene load_steps=132 format=2]
 
 [ext_resource path="res://Camera/CameraPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ShadowTilemap.tscn" type="PackedScene" id=2]
@@ -34,6 +34,7 @@
 [ext_resource path="res://World/Tree two.png" type="Texture" id=32]
 [ext_resource path="res://World/Pillar central Kyoto.png" type="Texture" id=33]
 [ext_resource path="res://World/Kyoto Level/Teacup2.png" type="Texture" id=34]
+[ext_resource path="res://Blossom.png" type="Texture" id=35]
 [ext_resource path="res://World/Kyoto Level/Teacup.png" type="Texture" id=37]
 [ext_resource path="res://World/Kyoto Level/Bush three.png" type="Texture" id=38]
 
@@ -1044,7 +1045,7 @@ tracks/0/keys = {
 [sub_resource type="ParticlesMaterial" id=173]
 lifetime_randomness = 0.05
 emission_shape = 2
-emission_box_extents = Vector3( 500, 500, 1 )
+emission_box_extents = Vector3( 500.189, 500, 1 )
 flag_disable_z = true
 gravity = Vector3( 125, 98, 0 )
 initial_velocity = 203.54
@@ -1515,13 +1516,13 @@ offset = Vector2( 0, -80 )
 position = Vector2( 48, 521 )
 scale = Vector2( 0.8125, 0.734375 )
 frames = SubResource( 172 )
-frame = 1
 playing = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/AnimatedSprite"]
 position = Vector2( 91.0769, 156.596 )
 scale = Vector2( 0.8125, 0.734375 )
 frames = SubResource( 172 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1575,6 +1576,7 @@ level = "res://Kyoto-First/Level2_2.tscn"
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( 321, 226 )
 process_material = SubResource( 173 )
+texture = ExtResource( 35 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.972549, 0.741176, 0.380392, 1 )
@@ -1593,7 +1595,6 @@ stream = ExtResource( 8 )
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 modulate = Color( 1, 1, 1, 0 )

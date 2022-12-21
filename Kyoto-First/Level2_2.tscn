@@ -1,4 +1,4 @@
-[gd_scene load_steps=118 format=2]
+[gd_scene load_steps=120 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Door/Door.tscn" type="PackedScene" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://World/Stone formation.png" type="Texture" id=27]
 [ext_resource path="res://World/Bush two.png" type="Texture" id=28]
 [ext_resource path="res://World/spritesheet (4) - Copy.png" type="Texture" id=29]
+[ext_resource path="res://Blossom.png" type="Texture" id=30]
 
 [sub_resource type="ConvexPolygonShape2D" id=76]
 points = PoolVector2Array( 43.198, 46.4131, -13.0648, 45.6093, -10.6535, -9.44791, 40.7868, -12.261 )
@@ -1002,6 +1003,22 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
+[sub_resource type="ParticlesMaterial" id=169]
+lifetime_randomness = 0.05
+emission_shape = 2
+emission_box_extents = Vector3( 500.189, 500, 1 )
+flag_disable_z = true
+gravity = Vector3( 125, 98, 0 )
+initial_velocity = 203.54
+angular_velocity = 5.38
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = -3.54
+angle = -203.9
+angle_random = 0.48
+scale = 0.2
+scale_random = 0.51
+
 [node name="Level2_2" type="Node2D"]
 script = ExtResource( 9 )
 
@@ -1121,7 +1138,6 @@ remote_path = NodePath("../../../CameraPlayer")
 position = Vector2( 410, 141 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
-frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1134,7 +1150,6 @@ texture = ExtResource( 14 )
 position = Vector2( 126, 415 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
-frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1147,7 +1162,6 @@ texture = ExtResource( 14 )
 position = Vector2( 431.5, 263.327 )
 scale = Vector2( 0.608163, 0.604082 )
 frames = SubResource( 60 )
-frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1244,7 +1258,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 164 )
 animation = " blurred red"
-frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1265,7 +1278,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 164 )
 animation = " blurred red"
-frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1285,6 +1297,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 164 )
 animation = " blurred red"
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1424,6 +1437,11 @@ information = "I feel bad for him..."
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 autoplay = true
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 321, 226 )
+process_material = SubResource( 169 )
+texture = ExtResource( 30 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
