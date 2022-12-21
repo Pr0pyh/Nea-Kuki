@@ -592,14 +592,17 @@ color = Color( 0.384314, 0.294118, 0.152941, 1 )
 environment = SubResource( 54 )
 
 [node name="Light" parent="." instance=ExtResource( 2 )]
+modulate = Color( 1, 0.631373, 0, 0.427451 )
 position = Vector2( 159, 26 )
 scale = Vector2( 0.507812, 0.507812 )
 
 [node name="Light2" parent="." instance=ExtResource( 2 )]
+modulate = Color( 1, 0.631373, 0, 0.521569 )
 position = Vector2( 298, 26 )
 scale = Vector2( 0.46875, 0.46875 )
 
 [node name="Light4" parent="." instance=ExtResource( 2 )]
+modulate = Color( 1, 0.631373, 0, 0.54902 )
 position = Vector2( 447, 190 )
 scale = Vector2( 0.411006, 0.411006 )
 
