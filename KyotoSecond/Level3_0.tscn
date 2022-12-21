@@ -475,13 +475,13 @@ tracks/0/keys = {
 "args": [ "Second part of Kyoto..." ],
 "method": "insertText"
 }, {
-"args": [ "We will visit grand hall " ],
+"args": [ "We will visit grand hall of martial arts" ],
 "method": "insertText"
 }, {
-"args": [ "We will visit Arashiyama forest..." ],
+"args": [ "I wonder who we will meet there" ],
 "method": "insertText"
 }, {
-"args": [ "...bamboo forest" ],
+"args": [ "...let's find more Yosei" ],
 "method": "insertText"
 } ]
 }
@@ -527,7 +527,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 117 )
 animation = " blurred red"
-frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -546,7 +545,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 117 )
 animation = " blurred red"
-frame = 1
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -565,6 +564,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 117 )
 animation = " blurred red"
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -583,6 +583,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 117 )
 animation = " blurred red"
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 

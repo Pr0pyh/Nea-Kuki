@@ -5,7 +5,7 @@
 [ext_resource path="res://Camera/CameraPlayer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://player2/player2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=5]
-[ext_resource path="res://Music and Sounds/Music.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Music and Sounds/Tokyo.mp3" type="AudioStream" id=6]
 [ext_resource path="res://enemy_moving/enemy_moving.tscn" type="PackedScene" id=7]
 [ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=8]
 [ext_resource path="res://TokyoNew/Level4_1.cs" type="Script" id=9]
@@ -476,7 +476,6 @@ environment = SubResource( 60 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-autoplay = true
 
 [node name="IntroExit" type="AnimationPlayer" parent="."]
 reset_on_save = false

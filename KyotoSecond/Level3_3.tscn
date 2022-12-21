@@ -10,7 +10,7 @@
 [ext_resource path="res://enemy_moving/enemy_moving.tscn" type="PackedScene" id=8]
 [ext_resource path="res://enemy/enemy.tscn" type="PackedScene" id=9]
 [ext_resource path="res://KyotoSecond/Level3_3.cs" type="Script" id=10]
-[ext_resource path="res://Music and Sounds/Music.mp3" type="AudioStream" id=11]
+[ext_resource path="res://Music and Sounds/Kyototest.mp3" type="AudioStream" id=11]
 [ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Light.tscn" type="PackedScene" id=13]
 

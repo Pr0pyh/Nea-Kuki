@@ -9,6 +9,7 @@ public class Level4_4 : Node2D
 	Area2D trigger;
 	PackedScene worker;
 	AnimationPlayer animPlayer;
+	MusicController musicController;
 	public override void _Ready()
 	{
 		background = GetNode<Sprite>("Background");
@@ -17,6 +18,7 @@ public class Level4_4 : Node2D
 		startPos = GetNode<Position2D>("StartPosition");
 		animPlayer = GetNode<AnimationPlayer>("Director");
 		worker = (PackedScene)ResourceLoader.Load("res://NPC/Worker.tscn");
+		musicController = (MusicController)GetNode("/root/MusicController");
 		Sprite newWorker = (Sprite)worker.Instance();
 		AddChild(newWorker);
 		newWorker.Position = startPos.Position;
@@ -43,5 +45,10 @@ public class Level4_4 : Node2D
 	private void _on_Director_animation_finished(String animName)
 	{
 		GetTree().ChangeScene("res://EndScene.tscn");
+	}
+
+	public void stopMusic()
+	{
+		musicController.stop();
 	}
 }
