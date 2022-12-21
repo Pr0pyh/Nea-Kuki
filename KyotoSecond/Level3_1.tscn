@@ -5,7 +5,7 @@
 [ext_resource path="res://NPC/KendoNPC.tscn" type="PackedScene" id=3]
 [ext_resource path="res://player2/player2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Camera/CameraPlayer.tscn" type="PackedScene" id=5]
-[ext_resource path="res://World/CliffTileset.png" type="Texture" id=6]
+[ext_resource path="res://SumoFighter/Sumo32.png" type="Texture" id=6]
 [ext_resource path="res://SumoFighter/imgonline-com-ua-tile-rhUfonCzIkY.jpg" type="Texture" id=7]
 [ext_resource path="res://enemy_moving/enemy_moving.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Door/Door.tscn" type="PackedScene" id=9]
@@ -626,7 +626,7 @@ position = Vector2( 312, 191 )
 scale = Vector2( 0.425781, 0.425781 )
 
 [node name="KendoNPC" parent="." instance=ExtResource( 3 )]
-position = Vector2( 392, 76 )
+position = Vector2( 407, 104 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Enemy" parent="." instance=ExtResource( 14 )]
