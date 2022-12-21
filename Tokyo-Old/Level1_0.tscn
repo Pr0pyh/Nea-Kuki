@@ -529,6 +529,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -547,7 +548,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
-frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -566,7 +566,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
-frame = 2
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -585,7 +585,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
-frame = 2
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -679,7 +679,6 @@ level = "res://Tokyo-Old/Level1_1.tscn"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
-autoplay = true
 
 [node name="IntroExit" type="AnimationPlayer" parent="."]
 reset_on_save = false

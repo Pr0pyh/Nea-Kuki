@@ -13,15 +13,8 @@ public class MainMenu : Control
 		
 	}
 
-<<<<<<< HEAD
-	private void _on_Button_pressed()
-	{
-		GetTree().ChangeScene("res://Tokyo-Old/Level1_0.tscn");
-	}
-=======
 	private void _on_Button_pressed()
 	{
 		GetTree().ChangeScene("res://IntroScene.tscn");
 	}
->>>>>>> 5fbf1b7107cb47b2d94b5c2d4cb748861dc63ea1
 }

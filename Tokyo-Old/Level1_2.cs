@@ -13,6 +13,7 @@ public class Level1_2 : Node2D
 	SumoNPC sumoNPC;
 	Door door;
 	AnimationPlayer introExit;
+	MusicController musicController;
 	int needed_score = 1;
 	
 	public override void _Ready()
@@ -20,8 +21,10 @@ public class Level1_2 : Node2D
 		player = GetNode<YSort>("YSort").GetNode<Player>("Player");
 		sumoNPC = GetNode<SumoNPC>("SumoNPC");
 		door = GetNode<Door>("Door");
+		musicController = (MusicController)GetNode("/root/MusicController");
 		introExit = GetNode<AnimationPlayer>("IntroExit");
 		introExit.Play("Entry");
+		musicController.playMusic("res://Music and Sounds/Kyototest.mp3");
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.

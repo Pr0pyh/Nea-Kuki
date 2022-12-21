@@ -802,7 +802,7 @@ color = Color( 0.352941, 0.262745, 0.121569, 1 )
 environment = SubResource( 59 )
 
 [node name="KendoNPC" parent="." instance=ExtResource( 3 )]
-position = Vector2( 541, 78 )
+position = Vector2( 541, 90 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Director" type="AnimationPlayer" parent="."]
@@ -824,6 +824,7 @@ anims/Exit = SubResource( 66 )
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 643, 78 )
 level = "res://TokyoNew/Level4_0.tscn"
+objectiveScore = 1
 
 [node name="enemy_moving" parent="." instance=ExtResource( 8 )]
 position = Vector2( 249, 559 )
@@ -869,6 +870,7 @@ stream = ExtResource( 11 )
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 modulate = Color( 1, 1, 1, 0.9 )

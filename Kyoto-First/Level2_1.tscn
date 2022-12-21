@@ -1196,8 +1196,8 @@ scale = Vector2( 3.55693, 1.13571 )
 texture = ExtResource( 14 )
 
 [node name="Red tree one2" type="AnimatedSprite" parent="YSort"]
-position = Vector2( -4, 88 )
-scale = Vector2( 0.781606, 0.93304 )
+position = Vector2( 28, 153 )
+scale = Vector2( 0.642264, 0.766701 )
 z_index = 2
 frames = SubResource( 167 )
 animation = "blurred pink"
@@ -1399,7 +1399,7 @@ position = Vector2( -19.8029, 1.69018 )
 scale = Vector2( 0.754225, 0.838806 )
 z_index = 2
 frames = SubResource( 170 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Lamp thing/Grass5"]
@@ -1408,7 +1408,7 @@ position = Vector2( -5.88708, 10.7296 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 170 )
-frame = 5
+frame = 1
 playing = true
 flip_h = true
 
@@ -1417,7 +1417,7 @@ position = Vector2( -18.3229, -22.5878 )
 scale = Vector2( 0.80933, 1.02249 )
 z_index = 2
 frames = SubResource( 170 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Lamp thing/Grass6"]
@@ -1426,7 +1426,7 @@ position = Vector2( -4.88252, 7.45499 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 170 )
-frame = 1
+frame = 3
 playing = true
 flip_h = true
 
@@ -1435,6 +1435,7 @@ position = Vector2( 0.918213, 1.69012 )
 scale = Vector2( 0.868461, 0.603231 )
 z_index = 2
 frames = SubResource( 170 )
+frame = 2
 playing = true
 flip_h = true
 
@@ -1444,6 +1445,7 @@ position = Vector2( -4.88252, 7.45499 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 170 )
+frame = 2
 playing = true
 flip_h = true
 
@@ -1452,7 +1454,7 @@ position = Vector2( 14.239, -1.11249 )
 scale = Vector2( 0.931913, 0.776679 )
 z_index = 2
 frames = SubResource( 170 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Lamp thing/Grass3"]
@@ -1461,7 +1463,7 @@ position = Vector2( -4.88252, 7.45499 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 170 )
-frame = 2
+frame = 4
 playing = true
 flip_h = true
 
@@ -1516,18 +1518,17 @@ offset = Vector2( 0, -80 )
 position = Vector2( 48, 521 )
 scale = Vector2( 0.8125, 0.734375 )
 frames = SubResource( 172 )
+frame = 1
 playing = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/AnimatedSprite"]
 position = Vector2( 91.0769, 156.596 )
 scale = Vector2( 0.8125, 0.734375 )
 frames = SubResource( 172 )
-frame = 1
 playing = true
 flip_h = true
 
 [node name="Player2" parent="." instance=ExtResource( 5 )]
-visible = false
 position = Vector2( 194, 44 )
 
 [node name="TeaMaster" parent="." instance=ExtResource( 4 )]
@@ -1592,7 +1593,6 @@ energy = 0.51
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
-autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1610,7 +1610,6 @@ __meta__ = {
 }
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="PauseMenu" parent="CanvasLayer2" instance=ExtResource( 16 )]
 

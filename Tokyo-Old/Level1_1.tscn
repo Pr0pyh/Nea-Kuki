@@ -1263,7 +1263,6 @@ position = Vector2( 296, 21 )
 scale = Vector2( 0.565306, 0.586214 )
 frames = SubResource( 64 )
 animation = "blurred pink"
-frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1284,7 +1283,6 @@ scale = Vector2( 0.565306, 0.673469 )
 z_index = 4
 frames = SubResource( 64 )
 animation = "blurred pink"
-frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1297,13 +1295,13 @@ texture = ExtResource( 13 )
 position = Vector2( 83, 186 )
 scale = Vector2( 0.8125, 0.734375 )
 frames = SubResource( 170 )
-frame = 1
 playing = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/AnimatedSprite"]
 position = Vector2( 91.0769, 156.596 )
 scale = Vector2( 0.8125, 0.734375 )
 frames = SubResource( 170 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1314,7 +1312,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 64 )
 animation = " blurred red"
-frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1334,7 +1331,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 64 )
 animation = " blurred red"
-frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1354,7 +1350,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 64 )
 animation = " blurred red"
-frame = 3
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1371,7 +1367,6 @@ position = Vector2( 692, 29 )
 scale = Vector2( 0.421292, 0.646067 )
 frames = SubResource( 64 )
 animation = "blurred pink"
-frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1392,7 +1387,6 @@ position = Vector2( 480, 20 )
 scale = Vector2( 0.583673, 0.591837 )
 frames = SubResource( 64 )
 animation = "blurred pink"
-frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1411,6 +1405,7 @@ position = Vector2( 45, 43 )
 scale = Vector2( 0.625, 0.59375 )
 z_index = 1
 frames = SubResource( 75 )
+frame = 2
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Grass"]
@@ -1419,7 +1414,7 @@ position = Vector2( 1.6, 6.73685 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = -1
 frames = SubResource( 75 )
-frame = 5
+frame = 1
 playing = true
 flip_h = true
 
@@ -1428,6 +1423,7 @@ position = Vector2( 225, 43 )
 scale = Vector2( 0.625, 0.59375 )
 z_index = 1
 frames = SubResource( 75 )
+frame = 2
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Grass5"]
@@ -1436,7 +1432,7 @@ position = Vector2( -9.60001, 3.36842 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = -1
 frames = SubResource( 75 )
-frame = 5
+frame = 1
 playing = true
 flip_h = true
 
@@ -1445,7 +1441,7 @@ position = Vector2( 197, 141 )
 scale = Vector2( 0.625, 0.59375 )
 z_index = 1
 frames = SubResource( 75 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Grass2"]
@@ -1454,7 +1450,7 @@ position = Vector2( 3.2, 6.73685 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 75 )
-frame = 5
+frame = 1
 playing = true
 flip_h = true
 
@@ -1463,7 +1459,6 @@ position = Vector2( 244, 148 )
 scale = Vector2( 0.625, 0.59375 )
 z_index = 2
 frames = SubResource( 75 )
-frame = 4
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Grass3"]
@@ -1472,7 +1467,6 @@ position = Vector2( 3.2, 6.73685 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 75 )
-frame = 4
 playing = true
 flip_h = true
 
@@ -1481,7 +1475,7 @@ position = Vector2( 313, 205 )
 scale = Vector2( 0.625, 0.59375 )
 z_index = 2
 frames = SubResource( 75 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Grass4"]
@@ -1490,7 +1484,7 @@ position = Vector2( -1.60004, 5.05266 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 75 )
-frame = 3
+frame = 5
 playing = true
 flip_h = true
 
@@ -1522,13 +1516,10 @@ environment = SubResource( 55 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
-autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
-visible = false
 anchor_left = 0.0875
 anchor_top = 0.0222222
 anchor_right = 0.0875
@@ -1542,10 +1533,8 @@ __meta__ = {
 }
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="PauseMenu" parent="CanvasLayer2" instance=ExtResource( 30 )]
-visible = false
 
 [connection signal="animation_finished" from="Director" to="NPC" method="_on_Director_animation_finished"]
 [connection signal="animation_finished" from="Director" to="YSort/Player" method="_on_Director_animation_finished"]
