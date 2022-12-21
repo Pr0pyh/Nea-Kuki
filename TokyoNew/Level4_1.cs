@@ -10,6 +10,7 @@ public class Level4_1 : Node2D
 	player2 _player;
 	Door door;
 	AnimationPlayer introExit;
+	MusicController musicController;
 	int needed_score = 0;
 	String[] animations = {"ACT1"};
 	// Called when the node enters the scene tree for the first time.
@@ -19,8 +20,11 @@ public class Level4_1 : Node2D
 		_player = GetNode<player2>("Player2");
 		door = GetNode<Door>("Door");
 		introExit = GetNode<AnimationPlayer>("IntroExit");
+		musicController = (MusicController)GetNode("/root/MusicController");
 		_player.objective = needed_score;
 		introExit.Play("Entry");
+		if(musicController.audioPlayer.Playing == false)
+			musicController.playMusic("res://Music and Sounds/Tokyo.mp3");
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.

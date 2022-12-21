@@ -42,6 +42,10 @@ config/name="TestProject"
 run/main_scene="res://MainMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+MusicController="*res://AudioController/MusicController.tscn"
+
 [display]
 
 window/size/width=320
