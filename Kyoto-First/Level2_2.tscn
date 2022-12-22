@@ -976,14 +976,11 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 4.2, 13 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 4.2 ),
+"transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
 "method": "stopMusic"
-}, {
-"args": [ "res://Music and Sounds/Theme.mp3" ],
-"method": "playMusic"
 } ]
 }
 
@@ -1139,6 +1136,7 @@ texture = ExtResource( 21 )
 
 [node name="CameraPlayer" parent="." instance=ExtResource( 5 )]
 position = Vector2( 485, 116 )
+zoom = Vector2( 1.5, 1.5 )
 
 [node name="TopLeft" parent="CameraPlayer/Node" index="0"]
 position = Vector2( -28, 1 )
@@ -1178,6 +1176,7 @@ remote_path = NodePath("../../../CameraPlayer")
 position = Vector2( 410, 141 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1190,6 +1189,7 @@ texture = ExtResource( 14 )
 position = Vector2( 126, 415 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 60 )
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1202,6 +1202,7 @@ texture = ExtResource( 14 )
 position = Vector2( 431.5, 263.327 )
 scale = Vector2( 0.608163, 0.604082 )
 frames = SubResource( 60 )
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 

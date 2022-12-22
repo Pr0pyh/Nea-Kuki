@@ -461,7 +461,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=57]
 resource_name = "ACT1"
-length = 16.0
+length = 13.0
 tracks/0/type = "method"
 tracks/0/path = NodePath("Player2")
 tracks/0/interp = 1
@@ -472,16 +472,16 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 4, 8, 12 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "values": [ {
-"args": [ "This is Butoduken palace for martial arts..." ],
+"args": [ "" ],
 "method": "insertText"
 }, {
-"args": [ "We will meet Kendo fighters..." ],
+"args": [ "It is home of many Budhist shrines." ],
 "method": "insertText"
 }, {
-"args": [ "Kendo is art about swordsmanship and honor... " ],
+"args": [ "We will visit Arashiyama forest..." ],
 "method": "insertText"
 }, {
-"args": [ "They build great spirit with hard training..." ],
+"args": [ "...bamboo forest" ],
 "method": "insertText"
 } ]
 }
@@ -527,7 +527,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 117 )
 animation = " blurred red"
-frame = 3
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -546,7 +546,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 117 )
 animation = " blurred red"
-frame = 2
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -565,7 +565,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 117 )
 animation = " blurred red"
-frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -584,7 +583,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 117 )
 animation = " blurred red"
-frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -689,7 +687,6 @@ anims/ACT1 = SubResource( 57 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
-modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 

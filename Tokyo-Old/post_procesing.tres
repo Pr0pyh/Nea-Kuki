@@ -9,8 +9,9 @@ gradient = SubResource( 54 )
 
 [resource]
 background_mode = 4
+background_energy = 0.34
 ambient_light_color = Color( 0.278431, 0.321569, 1, 1 )
-ambient_light_energy = 9.38
+ambient_light_energy = 5.64
 fog_enabled = true
 fog_sun_amount = 0.19
 fog_depth_begin = 14.0
@@ -19,7 +20,7 @@ fog_depth_curve = 0.812252
 fog_height_curve = 0.784584
 auto_exposure_scale = 0.1
 glow_enabled = true
-glow_intensity = 1.1
+glow_intensity = 0.04
 glow_strength = 1.08
 glow_bloom = 0.01
 glow_blend_mode = 1
