@@ -654,6 +654,23 @@ tracks/4/keys = {
 "update": 0,
 "values": [ Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ) ]
 }
+tracks/5/type = "method"
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 1, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "stopMusic"
+}, {
+"args": [ "res://Music and Sounds/Theme.mp3" ],
+"method": "playMusic"
+} ]
+}
 
 [sub_resource type="Animation" id=61]
 resource_name = "ACT1"
@@ -767,7 +784,6 @@ texture = ExtResource( 7 )
 
 [node name="CameraPlayer" parent="." instance=ExtResource( 5 )]
 position = Vector2( 497, 85 )
-zoom = Vector2( 1.5, 1.5 )
 
 [node name="TopLeft" parent="CameraPlayer/Node" index="0"]
 position = Vector2( -29, 0 )
@@ -802,15 +818,12 @@ color = Color( 0.352941, 0.262745, 0.121569, 1 )
 environment = SubResource( 59 )
 
 [node name="KendoNPC" parent="." instance=ExtResource( 3 )]
-position = Vector2( 541, 90 )
+position = Vector2( 541, 78 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Sprite" parent="KendoNPC" index="0"]
 animation = "ocajan"
 frame = 0
-
-[node name="AnimatedSprite" parent="KendoNPC/TextBox" index="2"]
-frame = 2
 
 [node name="Director" type="AnimationPlayer" parent="."]
 reset_on_save = false
@@ -874,10 +887,8 @@ information = "This is Shinai, Kendo sword. This is symbol of honor and courage.
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
-autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 modulate = Color( 1, 1, 1, 0.9 )

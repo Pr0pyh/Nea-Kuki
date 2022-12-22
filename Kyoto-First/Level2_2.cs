@@ -13,7 +13,7 @@ public class Level2_2 : Node2D
 	AnimationPlayer introExit;
 	MusicController musicController;
 	CameraPlayer cameraPlayer;
-	int needed_score = 3;
+	int needed_score = 1;
 	String[] animations = {"ACT1", "ACT2"};
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
