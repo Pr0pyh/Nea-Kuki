@@ -189,13 +189,14 @@ theme = ExtResource( 8 )
 text = "some text"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.350429, 0.575, 0.51201, 1 )
+color = Color( 0.369424, 0.573366, 0.488317, 1 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 60 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+volume_db = -67.612
 
 [node name="StartPosition" type="Position2D" parent="."]
 position = Vector2( 1, 307 )

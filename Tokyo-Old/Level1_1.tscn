@@ -692,13 +692,22 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 1, 2.4 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 1, 2.4, 3, 3.5, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "values": [ {
-"args": [ "Nea prati me" ],
+"args": [ "Come, Nea." ],
 "method": "insertText"
 }, {
-"args": [ "Pomozi mi da nadjem ostale vile" ],
+"args": [ "Please help me find my lost Yosei." ],
+"method": "insertText"
+}, {
+"args": [ "Just illuminate them with my light, and pick them." ],
+"method": "insertText"
+}, {
+"args": [ "We will meet some interesting people too." ],
+"method": "insertText"
+}, {
+"args": [ "Let's go." ],
 "method": "insertText"
 } ]
 }
@@ -951,7 +960,7 @@ z_index = 1
 tile_data = PoolIntArray( -262130, 0, 0, -262129, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 65552, 0, 0, 65553, 0, 0, 65554, 0, 0, 65555, 0, 0, 65558, 0, 0, 65559, 0, 0, 65560, 0, 0, 65561, 0, 0, 65562, 0, 0, 65563, 0, 0, 65564, 0, 0, 65565, 0, 0, 65566, 0, 0, 65567, 0, 0, 65570, 0, 0, 65571, 0, 0, 65572, 0, 0, 65573, 0, 0, 65574, 0, 0, 65575, 0, 0, 65578, 0, 0, 65579, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 131088, 0, 0, 131089, 0, 0, 131090, 0, 0, 131091, 0, 0, 131094, 0, 0, 131095, 0, 0, 131096, 0, 0, 131097, 0, 0, 131098, 0, 0, 131099, 0, 0, 131100, 0, 0, 131101, 0, 0, 131102, 0, 0, 131103, 0, 0, 131106, 0, 0, 131107, 0, 0, 131108, 0, 0, 131109, 0, 0, 131110, 0, 0, 131111, 0, 0, 131114, 0, 0, 131115, 0, 0, 196640, 0, 0, 196641, 0, 0, 196648, 0, 0, 196649, 0, 0, 327678, 0, 0, 327679, 0, 0, 262176, 0, 0, 262177, 0, 0, 262184, 0, 0, 262185, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458772, 0, 0, 458773, 0, 0, 458776, 0, 0, 458777, 0, 0, 458778, 0, 0, 458779, 0, 0, 458780, 0, 0, 458781, 0, 0, 458788, 0, 0, 458789, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524308, 0, 0, 524309, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524324, 0, 0, 524325, 0, 0, 589856, 0, 0, 589857, 0, 0, 655392, 0, 0, 655393, 0, 0, 720912, 0, 0, 720913, 0, 0, 720914, 0, 0, 720915, 0, 0, 786448, 0, 0, 786449, 0, 0, 786450, 0, 0, 786451, 0, 0, 851988, 0, 0, 851989, 0, 0, 851992, 0, 0, 851993, 0, 0, 851994, 0, 0, 851995, 0, 0, 851996, 0, 0, 851997, 0, 0, 851998, 0, 0, 851999, 0, 0, 852000, 0, 0, 852001, 0, 0, 852002, 0, 0, 852003, 0, 0, 852004, 0, 0, 852005, 0, 0, 852008, 0, 0, 852009, 0, 0, 917524, 0, 0, 917525, 0, 0, 917528, 0, 0, 917529, 0, 0, 917530, 0, 0, 917531, 0, 0, 917532, 0, 0, 917533, 0, 0, 917534, 0, 0, 917535, 0, 0, 917536, 0, 0, 917537, 0, 0, 917538, 0, 0, 917539, 0, 0, 917540, 0, 0, 917541, 0, 0, 917544, 0, 0, 917545, 0, 0, 1114132, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1114135, 0, 0, 1114140, 0, 0, 1114141, 0, 0, 1114144, 0, 0, 1114145, 0, 0, 1114148, 0, 0, 1114149, 0, 0, 1114150, 0, 0, 1114151, 0, 0, 1114154, 0, 0, 1114155, 0, 0, 1114156, 0, 0, 1114157, 0, 0, 1179668, 0, 0, 1179669, 0, 0, 1179670, 0, 0, 1179671, 0, 0, 1179676, 0, 0, 1179677, 0, 0, 1179680, 0, 0, 1179681, 0, 0, 1179684, 0, 0, 1179685, 0, 0, 1179686, 0, 0, 1179687, 0, 0, 1179690, 0, 0, 1179691, 0, 0, 1179692, 0, 0, 1179693, 0, 0, 1245218, 0, 0, 1245219, 0, 0, 1310754, 0, 0, 1310755, 0, 0, 1376258, 0, 0, 1376259, 0, 0, 1376260, 0, 0, 1376261, 0, 0, 1376262, 0, 0, 1376263, 0, 0, 1376264, 0, 0, 1376265, 0, 0, 1376266, 0, 0, 1376267, 0, 0, 1376268, 0, 0, 1376269, 0, 0, 1376270, 0, 0, 1376271, 0, 0, 1376272, 0, 0, 1376273, 0, 0, 1376274, 0, 0, 1376275, 0, 0, 1376276, 0, 0, 1376277, 0, 0, 1376278, 0, 0, 1376279, 0, 0, 1376280, 0, 0, 1376281, 0, 0, 1376282, 0, 0, 1376283, 0, 0, 1441794, 0, 0, 1441795, 0, 0, 1441796, 0, 0, 1441797, 0, 0, 1441798, 0, 0, 1441799, 0, 0, 1441800, 0, 0, 1441801, 0, 0, 1441802, 0, 0, 1441803, 0, 0, 1441804, 0, 0, 1441805, 0, 0, 1441806, 0, 0, 1441807, 0, 0, 1441808, 0, 0, 1441809, 0, 0, 1441810, 0, 0, 1441811, 0, 0, 1441812, 0, 0, 1441813, 0, 0, 1441814, 0, 0, 1441815, 0, 0, 1441816, 0, 0, 1441817, 0, 0, 1441818, 0, 0, 1441819, 0, 0, 1507358, 0, 0, 1507359, 0, 0, 1572894, 0, 0, 1572895, 0, 0, 1638440, 0, 0, 1638441, 0, 0, 1703976, 0, 0, 1703977, 0, 0 )
 
 [node name="NPC" parent="." instance=ExtResource( 2 )]
-position = Vector2( 359, 383 )
+position = Vector2( 360, 388 )
 scale = Vector2( 0.5, 0.5 )
 __meta__ = {
 "_edit_group_": true
@@ -959,7 +968,6 @@ __meta__ = {
 
 [node name="Sprite" parent="NPC" index="0"]
 z_index = 4
-frame = 2
 flip_h = true
 
 [node name="Light2D" type="Light2D" parent="NPC/Sprite" index="0"]
@@ -974,7 +982,7 @@ scale = Vector2( 0.937497, 0.9375 )
 frame = 0
 
 [node name="CameraPlayer" parent="." instance=ExtResource( 7 )]
-position = Vector2( 110, 228 )
+position = Vector2( 309, 390 )
 zoom = Vector2( 1.5, 1.5 )
 
 [node name="TopLeft" parent="CameraPlayer/Node" index="0"]
@@ -1021,7 +1029,7 @@ offset = Vector2( 26.5343, -31.0495 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 110, 228 )
+position = Vector2( 309, 390 )
 z_index = 2
 __meta__ = {
 "_edit_group_": true
@@ -1263,6 +1271,7 @@ position = Vector2( 296, 21 )
 scale = Vector2( 0.565306, 0.586214 )
 frames = SubResource( 64 )
 animation = "blurred pink"
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1283,6 +1292,7 @@ scale = Vector2( 0.565306, 0.673469 )
 z_index = 4
 frames = SubResource( 64 )
 animation = "blurred pink"
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1312,6 +1322,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 64 )
 animation = " blurred red"
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1331,6 +1342,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 64 )
 animation = " blurred red"
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1350,7 +1362,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 64 )
 animation = " blurred red"
-frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1367,6 +1378,7 @@ position = Vector2( 692, 29 )
 scale = Vector2( 0.421292, 0.646067 )
 frames = SubResource( 64 )
 animation = "blurred pink"
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1387,6 +1399,7 @@ position = Vector2( 480, 20 )
 scale = Vector2( 0.583673, 0.591837 )
 frames = SubResource( 64 )
 animation = "blurred pink"
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1405,7 +1418,7 @@ position = Vector2( 45, 43 )
 scale = Vector2( 0.625, 0.59375 )
 z_index = 1
 frames = SubResource( 75 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Grass"]
@@ -1414,7 +1427,7 @@ position = Vector2( 1.6, 6.73685 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = -1
 frames = SubResource( 75 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
@@ -1423,7 +1436,7 @@ position = Vector2( 225, 43 )
 scale = Vector2( 0.625, 0.59375 )
 z_index = 1
 frames = SubResource( 75 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Grass5"]
@@ -1432,7 +1445,7 @@ position = Vector2( -9.60001, 3.36842 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = -1
 frames = SubResource( 75 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
@@ -1441,7 +1454,7 @@ position = Vector2( 197, 141 )
 scale = Vector2( 0.625, 0.59375 )
 z_index = 1
 frames = SubResource( 75 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Grass2"]
@@ -1450,7 +1463,7 @@ position = Vector2( 3.2, 6.73685 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 75 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
@@ -1459,6 +1472,7 @@ position = Vector2( 244, 148 )
 scale = Vector2( 0.625, 0.59375 )
 z_index = 2
 frames = SubResource( 75 )
+frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Grass3"]
@@ -1467,6 +1481,7 @@ position = Vector2( 3.2, 6.73685 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 75 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1475,7 +1490,6 @@ position = Vector2( 313, 205 )
 scale = Vector2( 0.625, 0.59375 )
 z_index = 2
 frames = SubResource( 75 )
-frame = 5
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Grass4"]
@@ -1484,7 +1498,6 @@ position = Vector2( -1.60004, 5.05266 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 75 )
-frame = 5
 playing = true
 flip_h = true
 

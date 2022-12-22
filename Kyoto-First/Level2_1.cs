@@ -12,6 +12,7 @@ public class Level2_1 : Node2D
 	Door door;
 	int needed_score = 5;
 	AnimationPlayer introExit;
+	MusicController musicController;
 	String[] animations = {"ACT1", "ACT2"};
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -20,10 +21,13 @@ public class Level2_1 : Node2D
 		teaMaster = GetNode<NPC>("TeaMaster");
 		_player = GetNode<player2>("Player2");
 		door = GetNode<Door>("Door");
+		musicController = (MusicController)GetNode("/root/MusicController");
 		introExit = GetNode<AnimationPlayer>("IntroExit");
 		_player.objective = needed_score;
 		teaMaster.animations = animations;
 		introExit.Play("Entry");
+		if(musicController.audioPlayer.Playing == false)
+			musicController.playMusic("res://Music and Sounds/Theme.mp3");
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.

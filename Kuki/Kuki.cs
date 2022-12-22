@@ -10,7 +10,7 @@ public class Kuki : KinematicBody2D
         FINDING,
     };
 
-    EVENT state;
+    public EVENT state;
     public AnimationPlayer animPlayer;
     public AnimationTree animTree;
     public AnimationNodeStateMachinePlayback animState;
@@ -34,7 +34,6 @@ public class Kuki : KinematicBody2D
                 moveState(delta);
                 break;
             case EVENT.FINDING:
-                animState.Travel("Idle");
                 break;
         }
     }
@@ -79,5 +78,22 @@ public class Kuki : KinematicBody2D
     private void _on_Director_animation_started(String animName)
     {
         state = EVENT.FINDING;
+    }
+
+    public void inAnimationMove()
+    {
+        if(state == EVENT.FINDING)
+        {
+            animTree.Set("parameters/Run/blend_position", velocity);
+            animState.Travel("Run");
+        }
+    }
+
+    public void inAnimationStop()
+    {
+        if(state == EVENT.FINDING)
+        {
+            animState.Travel("Idle");
+        }
     }
 }

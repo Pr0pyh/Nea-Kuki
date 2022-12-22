@@ -30,6 +30,20 @@ tracks/1/keys = {
 "update": 1,
 "values": [ "", "Yosei are special beings", "They don't know about evil", "so they never grow old", "Growing up is...", "...strive for perfection", "Find all lost Yosei..." ]
 }
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 12 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "res://Music and Sounds/Theme.mp3" ],
+"method": "startMusic"
+} ]
+}
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -81,7 +95,6 @@ anims/Intro = SubResource( 1 )
 anims/RESET = SubResource( 2 )
 
 [node name="Panel2" type="Panel" parent="."]
-modulate = Color( 1, 1, 1, 0.5 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 

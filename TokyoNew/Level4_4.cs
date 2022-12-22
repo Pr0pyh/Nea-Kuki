@@ -51,4 +51,9 @@ public class Level4_4 : Node2D
 	{
 		musicController.stop();
 	}
+
+	public void playMusic(String musicName)
+	{
+		musicController.playMusic(musicName);
+	}
 }

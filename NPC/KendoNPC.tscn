@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://NPC/KendoNPC.cs" type="Script" id=1]
 [ext_resource path="res://World/Kyoto Level/Kendo/Timeline 1_0012.png" type="Texture" id=2]
@@ -21,12 +21,22 @@
 [ext_resource path="res://World/Kyoto Level/Kendo/Timeline 1_0017.png" type="Texture" id=19]
 [ext_resource path="res://World/Kyoto Level/Kendo/Timeline 1_0016.png" type="Texture" id=20]
 [ext_resource path="res://World/Kyoto Level/Kendo/Timeline 1_0015.png" type="Texture" id=21]
+[ext_resource path="res://NPC/Kendo.png" type="Texture" id=22]
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 22 )
+region = Rect2( 0, 0, 92, 104 )
 
 [sub_resource type="SpriteFrames" id=12]
 animations = [ {
 "frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 14 ) ],
+"loop": true,
+"name": "ocajan",
 "speed": 5.0
 } ]
 
@@ -57,7 +67,7 @@ script = ExtResource( 1 )
 position = Vector2( 9.25, -51.621 )
 scale = Vector2( 1.30645, 1.30645 )
 frames = SubResource( 12 )
-frame = 12
+frame = 14
 playing = true
 
 [node name="Sprite" type="AnimatedSprite" parent="Sprite"]
@@ -66,7 +76,7 @@ position = Vector2( 1.3395, 81.6111 )
 scale = Vector2( 1.03443, 0.712421 )
 z_index = -1
 frames = SubResource( 12 )
-frame = 2
+animation = "ocajan"
 flip_v = true
 
 [node name="TextBox" type="MarginContainer" parent="."]

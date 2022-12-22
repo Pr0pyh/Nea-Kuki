@@ -20,7 +20,8 @@ public class Level1_0 : Node2D
 		introExit = GetNode<AnimationPlayer>("IntroExit");
 		musicController = (MusicController)GetNode("/root/MusicController");
 		introExit.Play("Entry");
-		musicController.playMusic("res://Music and Sounds/Theme.mp3");
+		if(musicController.audioPlayer.Playing == false)
+			musicController.playMusic("res://Music and Sounds/Theme.mp3");
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.

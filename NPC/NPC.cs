@@ -18,6 +18,7 @@ public class NPC : KinematicBody2D
 	Label textBox;
 	Area2D collisionSpace;
 	String animName;
+	AnimatedSprite animSprite;
 	AnimationPlayer animPlayer;
 	AudioStreamPlayer audioPlayer;
 	int actNumber;
@@ -33,6 +34,7 @@ public class NPC : KinematicBody2D
 		collisionSpace = GetNode<Area2D>("CollisionSpace");
 		animPlayer = GetParent().GetNode<AnimationPlayer>("Director");
 		audioPlayer = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
+		animSprite = GetNode<AnimatedSprite>("Sprite");
 		collisionSpace.Monitoring = true;
 		TextBox.Visible = false;
 		condition = false;
@@ -90,5 +92,10 @@ public class NPC : KinematicBody2D
 			collisionSpace.Monitoring = false;
 		}
 		state = EVENT.NOT_IN_ANIMATION;
+	}
+
+	public void changeSprite(String animationName)
+	{
+		animSprite.Animation = animationName;
 	}
 }

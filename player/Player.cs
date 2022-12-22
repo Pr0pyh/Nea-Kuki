@@ -122,6 +122,7 @@ public class Player : KinematicBody2D
         {
             animTree.Set("parameters/Run/blend_position", velocity);
             animState.Travel("Run");
+            kuki.animState.Travel("Run");
         }
     }
 
@@ -130,6 +131,7 @@ public class Player : KinematicBody2D
         if(state == EVENT.STOP)
         {
             animState.Travel("Idle");
+            kuki.animState.Travel("Idle");
         }
     }
 
@@ -137,21 +139,25 @@ public class Player : KinematicBody2D
     {
         camera.Zoom = new Vector2(1.5f, 1.5f);
         state = EVENT.MOVE;
+        kuki.state = Kuki.EVENT.MOVE;
     }
 
     private void _on_Director_animation_started(String animName)
     {
         state = EVENT.STOP;
+        kuki.state = Kuki.EVENT.FINDING;
     }
 
     private void _on_IntroExit_animation_started(String animName)
     {
         state = EVENT.STOP;
+        kuki.state = Kuki.EVENT.FINDING;
     }
 
     private void _on_IntroExit_animation_finished(String animName)
     {
         state = EVENT.MOVE;
+        kuki.state = Kuki.EVENT.MOVE;
     }
 
     private void _on_Hitbox_body_entered(Node body)
