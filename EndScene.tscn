@@ -24,7 +24,7 @@ margin_top = 82.0
 margin_right = 320.0
 margin_bottom = 98.0
 theme = ExtResource( 1 )
-text = "NEA I KUKI OTKRIVAJU JAPAN"
+text = "NEA & KUKI DISCOVER JAPAN"
 align = 1
 
 [node name="Button" type="Button" parent="."]

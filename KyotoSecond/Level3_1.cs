@@ -28,6 +28,7 @@ public class Level3_1 : Node2D
 		_player.objective = needed_score;
 		kendoMaster.animations = animations;
 		cameraPlayer.Zoom = new Vector2(1.5f, 1.5f);
+		Input.MouseMode = Input.MouseModeEnum.Hidden;
 		introExit.Play("Entry");
 		musicController.playMusic("res://Music and Sounds/Kyototest.mp3");
 	}

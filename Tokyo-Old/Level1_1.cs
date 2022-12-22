@@ -24,6 +24,7 @@ public class Level1_1 : Node2D
 		musicController = (MusicController)GetNode("/root/MusicController");
 		npc.animations = animations;
 		introExit.Play("Entry");
+		Input.MouseMode = Input.MouseModeEnum.Hidden;
 		if(musicController.audioPlayer.Playing == false)
 			musicController.playMusic("res://Music and Sounds/Theme.mp3");
 	}

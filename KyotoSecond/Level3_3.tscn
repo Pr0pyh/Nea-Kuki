@@ -893,7 +893,6 @@ information = "This is Shinai, Kendo sword. This is symbol of honor and courage.
 stream = ExtResource( 11 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 modulate = Color( 1, 1, 1, 0.9 )

@@ -67,6 +67,7 @@ singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
 
 ex=false
 enviroment=false
+export=true
 
 [gui]
 

@@ -28,6 +28,7 @@ public class Level2_2 : Node2D
 		_player.objective = needed_score;
 		teaMaster.animations = animations;
 		cameraPlayer.Zoom = new Vector2(1.5f, 1.5f);
+		Input.MouseMode = Input.MouseModeEnum.Hidden;
 		introExit.Play("Entry");
 		if(musicController.audioPlayer.Playing == false)
 			musicController.playMusic("res://Music and Sounds/Theme.mp3");
