@@ -825,6 +825,9 @@ scale = Vector2( 0.5, 0.5 )
 animation = "ocajan"
 frame = 0
 
+[node name="AnimatedSprite" parent="KendoNPC/TextBox" index="2"]
+frame = 1
+
 [node name="Director" type="AnimationPlayer" parent="."]
 reset_on_save = false
 anims/ACT1 = SubResource( 60 )
@@ -843,7 +846,7 @@ anims/Exit = SubResource( 66 )
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 643, 78 )
-level = "res://TokyoNew/Level4_0.tscn"
+level = "res://EndScene.tscn"
 objectiveScore = 1
 
 [node name="enemy_moving" parent="." instance=ExtResource( 8 )]

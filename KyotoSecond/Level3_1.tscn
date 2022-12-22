@@ -701,7 +701,7 @@ anims/Exit = SubResource( 59 )
 
 [node name="Door" parent="." instance=ExtResource( 9 )]
 position = Vector2( 643, 78 )
-level = "res://KyotoSecond/Level3_2.tscn"
+level = "res://KyotoSecond/Level3_3.tscn"
 objectiveScore = 1
 
 [node name="Particles2D" type="Particles2D" parent="."]

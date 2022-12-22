@@ -885,7 +885,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 263, 101 ) ]
+"values": [ Vector2( 195, 92 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Player2:position")
@@ -967,10 +967,10 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 1, 6, 7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ) ]
+"values": [ Vector2( 1.5, 1.5 ), Vector2( 1.2, 1.2 ), Vector2( 1.5, 1.5 ), Vector2( 1.5, 1.5 ) ]
 }
 
-[sub_resource type="Animation" id=63]
+[sub_resource type="Animation" id=174]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/Player:position")
@@ -982,7 +982,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 195, 91 ) ]
+"values": [ Vector2( 195, 92 ) ]
 }
 
 [sub_resource type="Animation" id=61]
@@ -1129,7 +1129,7 @@ scale = Vector2( 1.53737, 0.972534 )
 texture = ExtResource( 27 )
 
 [node name="CameraPlayer" parent="." instance=ExtResource( 1 )]
-position = Vector2( 186, 96 )
+position = Vector2( 195, 92 )
 zoom = Vector2( 1.5, 1.5 )
 
 [node name="TopLeft" parent="CameraPlayer/Node" index="0"]
@@ -1155,7 +1155,7 @@ tile_data = PoolIntArray( -262130, 0, 0, -262129, 0, 0, 65536, 0, 0, 65537, 0, 0
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 186, 96 )
+position = Vector2( 195, 92 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1539,7 +1539,7 @@ scale = Vector2( 0.5, 0.5 )
 reset_on_save = false
 anims/ACT1 = SubResource( 1 )
 anims/ACT2 = SubResource( 55 )
-anims/RESET = SubResource( 63 )
+anims/RESET = SubResource( 174 )
 
 [node name="IntroExit" type="AnimationPlayer" parent="."]
 reset_on_save = false
