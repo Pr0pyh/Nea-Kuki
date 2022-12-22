@@ -26,8 +26,7 @@ public class Level2_1 : Node2D
 		_player.objective = needed_score;
 		teaMaster.animations = animations;
 		introExit.Play("Entry");
-		if(musicController.audioPlayer.Playing == false)
-			musicController.playMusic("res://Music and Sounds/Theme.mp3");
+		musicController.playMusic("res://Music and Sounds/Theme.mp3");
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -968,7 +968,7 @@ __meta__ = {
 
 [node name="Sprite" parent="NPC" index="0"]
 z_index = 4
-frame = 2
+frame = 3
 flip_h = true
 
 [node name="Light2D" type="Light2D" parent="NPC/Sprite" index="0"]
@@ -980,7 +980,7 @@ color = Color( 0.435294, 0.960784, 1, 1 )
 [node name="AnimatedSprite" parent="NPC/TextBox" index="2"]
 position = Vector2( 182, 30 )
 scale = Vector2( 0.937497, 0.9375 )
-frame = 2
+frame = 0
 
 [node name="CameraPlayer" parent="." instance=ExtResource( 7 )]
 position = Vector2( 309, 390 )
@@ -1272,7 +1272,7 @@ position = Vector2( 296, 21 )
 scale = Vector2( 0.565306, 0.586214 )
 frames = SubResource( 64 )
 animation = "blurred pink"
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1293,7 +1293,7 @@ scale = Vector2( 0.565306, 0.673469 )
 z_index = 4
 frames = SubResource( 64 )
 animation = "blurred pink"
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1323,7 +1323,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 64 )
 animation = " blurred red"
-frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1343,7 +1342,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 64 )
 animation = " blurred red"
-frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1363,7 +1361,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 64 )
 animation = " blurred red"
-frame = 1
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1380,7 +1378,7 @@ position = Vector2( 692, 29 )
 scale = Vector2( 0.421292, 0.646067 )
 frames = SubResource( 64 )
 animation = "blurred pink"
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1401,7 +1399,7 @@ position = Vector2( 480, 20 )
 scale = Vector2( 0.583673, 0.591837 )
 frames = SubResource( 64 )
 animation = "blurred pink"
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 

@@ -840,11 +840,11 @@ position = Vector2( 175, 76 )
 
 [node name="AnimatedSprite" parent="SumoFighter" index="0"]
 position = Vector2( 0, 8 )
-frame = 7
+frame = 5
 
 [node name="HitEffect" parent="SumoFighter" index="1"]
 position = Vector2( -74, 18 )
-frame = 5
+frame = 1
 
 [node name="CollisionShape2D" parent="SumoFighter" index="2"]
 position = Vector2( -74, 20 )
@@ -896,7 +896,7 @@ anims/RESET = SubResource( 57 )
 
 [node name="Door" parent="." instance=ExtResource( 7 )]
 position = Vector2( 608, 351 )
-level = "res://Kyoto-First/LevelTrain.tscn"
+level = "res://Kyoto-First/Level2_1.tscn"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.627451, 0.392157, 0.321569, 0.992157 )

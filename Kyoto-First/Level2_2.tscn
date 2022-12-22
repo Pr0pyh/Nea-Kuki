@@ -976,11 +976,14 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 4.2 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 4.2, 13 ),
+"transitions": PoolRealArray( 1, 1 ),
 "values": [ {
 "args": [  ],
 "method": "stopMusic"
+}, {
+"args": [ "res://Music and Sounds/Theme.mp3" ],
+"method": "playMusic"
 } ]
 }
 
@@ -1136,7 +1139,6 @@ texture = ExtResource( 21 )
 
 [node name="CameraPlayer" parent="." instance=ExtResource( 5 )]
 position = Vector2( 485, 116 )
-zoom = Vector2( 1.5, 1.5 )
 
 [node name="TopLeft" parent="CameraPlayer/Node" index="0"]
 position = Vector2( -28, 1 )
@@ -1299,6 +1301,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 164 )
 animation = " blurred red"
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1319,6 +1322,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 164 )
 animation = " blurred red"
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1338,7 +1342,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 164 )
 animation = " blurred red"
-frame = 3
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1440,7 +1444,7 @@ texture = ExtResource( 14 )
 
 [node name="Door" parent="." instance=ExtResource( 2 )]
 position = Vector2( 641, 109 )
-level = "res://KyotoSecond/Level3_0.tscn"
+level = "res://KyotoSecond/Level3_1.tscn"
 objectiveScore = 3
 
 [node name="TeaMaster" parent="." instance=ExtResource( 3 )]

@@ -11,6 +11,8 @@ public class Level3_2 : Node2D
 	KendoNPC kendoMaster;
 	Door door;
 	AnimationPlayer introExit;
+	MusicController musicController;
+	CameraPlayer cameraPlayer;
 	int needed_score = 1;
 	String[] animations = {"ACT1"};
 	// Called when the node enters the scene tree for the first time.
@@ -21,9 +23,14 @@ public class Level3_2 : Node2D
 		_player = GetNode<player2>("Player2");
 		door = GetNode<Door>("Door");
 		introExit = GetNode<AnimationPlayer>("IntroExit");
+		cameraPlayer = GetNode<CameraPlayer>("CameraPlayer");
+		musicController = (MusicController)GetNode("/root/MusicController");
 		_player.objective = needed_score;
 		kendoMaster.animations = animations;
+		cameraPlayer.Zoom = new Vector2(1.5f, 1.5f);
 		introExit.Play("Entry");
+		if(musicController.audioPlayer.Playing == false)
+			musicController.playMusic("res://Music and Sounds/Kyototest.mp3");
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.

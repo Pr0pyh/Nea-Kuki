@@ -10,7 +10,6 @@ public class Kuki : KinematicBody2D
 		FINDING,
 	};
 
-<<<<<<< Updated upstream
     public EVENT state;
     public AnimationPlayer animPlayer;
     public AnimationTree animTree;
@@ -38,36 +37,6 @@ public class Kuki : KinematicBody2D
                 break;
         }
     }
-=======
-	EVENT state;
-	public AnimationPlayer animPlayer;
-	public AnimationTree animTree;
-	public AnimationNodeStateMachinePlayback animState;
-	public Vector2 velocity;
-	public override void _Ready()
-	{
-		animPlayer = this.GetNode<AnimationPlayer>("AnimationPlayer");
-		animTree = this.GetNode<AnimationTree>("AnimationTree");
-		animTree.Active = true;
-		animState = (AnimationNodeStateMachinePlayback)animTree.Get("parameters/playback");
-		GD.Print(velocity);
-		state = EVENT.MOVE;
-	}
-
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(float delta)
-	{
-		switch(state)
-		{
-			case EVENT.MOVE:
-				moveState(delta);
-				break;
-			case EVENT.FINDING:
-				animState.Travel("Idle");
-				break;
-		}
-	}
->>>>>>> Stashed changes
 
 	void moveState(float delta)
 	{
@@ -106,7 +75,6 @@ public class Kuki : KinematicBody2D
 		state = EVENT.MOVE;
 	}
 
-<<<<<<< Updated upstream
     private void _on_Director_animation_started(String animName)
     {
         state = EVENT.FINDING;
@@ -128,10 +96,4 @@ public class Kuki : KinematicBody2D
             animState.Travel("Idle");
         }
     }
-=======
-	private void _on_Director_animation_started(String animName)
-	{
-		state = EVENT.FINDING;
-	}
->>>>>>> Stashed changes
 }

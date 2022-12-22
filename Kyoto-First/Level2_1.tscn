@@ -1,4 +1,4 @@
-[gd_scene load_steps=132 format=2]
+[gd_scene load_steps=131 format=2]
 
 [ext_resource path="res://Camera/CameraPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ShadowTilemap.tscn" type="PackedScene" id=2]
@@ -885,7 +885,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 263, 101 ) ]
+"values": [ Vector2( 186, 96 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Player2:position")
@@ -968,21 +968,6 @@ tracks/5/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ) ]
-}
-
-[sub_resource type="Animation" id=63]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("YSort/Player:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 195, 91 ) ]
 }
 
 [sub_resource type="Animation" id=61]
@@ -1130,7 +1115,6 @@ texture = ExtResource( 27 )
 
 [node name="CameraPlayer" parent="." instance=ExtResource( 1 )]
 position = Vector2( 186, 96 )
-current = false
 zoom = Vector2( 1.5, 1.5 )
 
 [node name="TopLeft" parent="CameraPlayer/Node" index="0"]
@@ -1202,7 +1186,7 @@ scale = Vector2( 0.642264, 0.766701 )
 z_index = 2
 frames = SubResource( 167 )
 animation = "blurred pink"
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 210.326, 103.975 )
 
@@ -1222,7 +1206,7 @@ position = Vector2( 645, 520 )
 scale = Vector2( 0.798945, 0.890896 )
 frames = SubResource( 167 )
 animation = "blurred pink"
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 1.22296, -105.801 )
 
@@ -1243,6 +1227,7 @@ position = Vector2( 772, 181 )
 scale = Vector2( 0.81778, 0.891426 )
 frames = SubResource( 167 )
 animation = "blurred pink"
+frame = 2
 playing = true
 offset = Vector2( 1.22296, -105.801 )
 
@@ -1399,7 +1384,7 @@ position = Vector2( -19.8029, 1.69018 )
 scale = Vector2( 0.754225, 0.838806 )
 z_index = 2
 frames = SubResource( 170 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Lamp thing/Grass5"]
@@ -1408,7 +1393,7 @@ position = Vector2( -5.88708, 10.7296 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 170 )
-frame = 3
+frame = 5
 playing = true
 flip_h = true
 
@@ -1417,7 +1402,7 @@ position = Vector2( -18.3229, -22.5878 )
 scale = Vector2( 0.80933, 1.02249 )
 z_index = 2
 frames = SubResource( 170 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Lamp thing/Grass6"]
@@ -1426,7 +1411,7 @@ position = Vector2( -4.88252, 7.45499 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 170 )
-frame = 5
+frame = 1
 playing = true
 flip_h = true
 
@@ -1435,7 +1420,6 @@ position = Vector2( 0.918213, 1.69012 )
 scale = Vector2( 0.868461, 0.603231 )
 z_index = 2
 frames = SubResource( 170 )
-frame = 4
 playing = true
 flip_h = true
 
@@ -1445,7 +1429,6 @@ position = Vector2( -4.88252, 7.45499 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 170 )
-frame = 4
 playing = true
 flip_h = true
 
@@ -1454,6 +1437,7 @@ position = Vector2( 14.239, -1.11249 )
 scale = Vector2( 0.931913, 0.776679 )
 z_index = 2
 frames = SubResource( 170 )
+frame = 2
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Lamp thing/Grass3"]
@@ -1462,6 +1446,7 @@ position = Vector2( -4.88252, 7.45499 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 170 )
+frame = 2
 playing = true
 flip_h = true
 
@@ -1537,7 +1522,6 @@ scale = Vector2( 0.5, 0.5 )
 reset_on_save = false
 anims/ACT1 = SubResource( 1 )
 anims/ACT2 = SubResource( 55 )
-anims/RESET = SubResource( 63 )
 
 [node name="IntroExit" type="AnimationPlayer" parent="."]
 reset_on_save = false

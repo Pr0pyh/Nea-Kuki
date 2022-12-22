@@ -530,13 +530,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
-<<<<<<< HEAD
-<<<<<<< Updated upstream
 frame = 2
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> parent of 1712985 (Pazi dok pullujes molim te ne znam sta se promenilo)
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -555,15 +549,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-frame = 1
-=======
 frame = 3
->>>>>>> Stashed changes
-=======
-frame = 3
->>>>>>> parent of 1712985 (Pazi dok pullujes molim te ne znam sta se promenilo)
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -582,14 +568,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
 frame = 2
->>>>>>> Stashed changes
-=======
-frame = 2
->>>>>>> parent of 1712985 (Pazi dok pullujes molim te ne znam sta se promenilo)
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -608,14 +587,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
 frame = 2
->>>>>>> Stashed changes
-=======
-frame = 2
->>>>>>> parent of 1712985 (Pazi dok pullujes molim te ne znam sta se promenilo)
 playing = true
 offset = Vector2( 0, -80 )
 
