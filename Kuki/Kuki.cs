@@ -10,33 +10,33 @@ public class Kuki : KinematicBody2D
 		FINDING,
 	};
 
-    public EVENT state;
-    public AnimationPlayer animPlayer;
-    public AnimationTree animTree;
-    public AnimationNodeStateMachinePlayback animState;
-    public Vector2 velocity;
-    public override void _Ready()
-    {
-        animPlayer = this.GetNode<AnimationPlayer>("AnimationPlayer");
-        animTree = this.GetNode<AnimationTree>("AnimationTree");
-        animTree.Active = true;
-        animState = (AnimationNodeStateMachinePlayback)animTree.Get("parameters/playback");
-        GD.Print(velocity);
-        state = EVENT.MOVE;
-    }
+	public EVENT state;
+	public AnimationPlayer animPlayer;
+	public AnimationTree animTree;
+	public AnimationNodeStateMachinePlayback animState;
+	public Vector2 velocity;
+	public override void _Ready()
+	{
+		animPlayer = this.GetNode<AnimationPlayer>("AnimationPlayer");
+		animTree = this.GetNode<AnimationTree>("AnimationTree");
+		animTree.Active = true;
+		animState = (AnimationNodeStateMachinePlayback)animTree.Get("parameters/playback");
+		GD.Print(velocity);
+		state = EVENT.MOVE;
+	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(float delta)
-    {
-        switch(state)
-        {
-            case EVENT.MOVE:
-                moveState(delta);
-                break;
-            case EVENT.FINDING:
-                break;
-        }
-    }
+	public override void _Process(float delta)
+	{
+		switch(state)
+		{
+			case EVENT.MOVE:
+				moveState(delta);
+				break;
+			case EVENT.FINDING:
+				break;
+		}
+	}
 
 	void moveState(float delta)
 	{
@@ -75,25 +75,25 @@ public class Kuki : KinematicBody2D
 		state = EVENT.MOVE;
 	}
 
-    private void _on_Director_animation_started(String animName)
-    {
-        state = EVENT.FINDING;
-    }
+	private void _on_Director_animation_started(String animName)
+	{
+		state = EVENT.FINDING;
+	}
 
-    public void inAnimationMove()
-    {
-        if(state == EVENT.FINDING)
-        {
-            animTree.Set("parameters/Run/blend_position", velocity);
-            animState.Travel("Run");
-        }
-    }
+	public void inAnimationMove()
+	{
+		if(state == EVENT.FINDING)
+		{
+			animTree.Set("parameters/Run/blend_position", velocity);
+			animState.Travel("Run");
+		}
+	}
 
-    public void inAnimationStop()
-    {
-        if(state == EVENT.FINDING)
-        {
-            animState.Travel("Idle");
-        }
-    }
+	public void inAnimationStop()
+	{
+		if(state == EVENT.FINDING)
+		{
+			animState.Travel("Idle");
+		}
+	}
 }

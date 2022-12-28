@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://TextBox/MinimalUI.tres" type="Theme" id=1]
+[ext_resource path="res://TextBox/newfontUI.tres" type="Theme" id=1]
 [ext_resource path="res://IntroScene.cs" type="Script" id=2]
+[ext_resource path="res://NEW FONT.tres" type="DynamicFont" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Intro"
@@ -13,7 +14,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.5, 3, 3.6, 4.8, 6.7, 7.5, 8.5, 10.5, 11, 12, 14, 15, 17, 17.9, 18.9, 21, 21.9 ),
+"times": PoolRealArray( 0, 1.5, 3, 3.6, 4.8, 6.7, 7.5, 8.5, 11.9, 12.4, 13.4, 15.4, 16.4, 18.8, 19.7, 20.7, 22.8, 23.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.34151 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
@@ -25,10 +26,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 3.6, 7.5, 11, 14, 17.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0.5, 3.6, 7.5, 12.4, 15.4, 19.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ "", "Yosei are special beings", "They don't know about evil", "so they never grow old", "Growing up is...", "...strive for perfection", "Find all lost Yosei..." ]
+"values": [ "Yosei are special beings.", "They don't know about evil", "so they never grow old.", "Growing up is...", "...striving for perfection.", "Find all the lost Yosei..." ]
 }
 tracks/2/type = "method"
 tracks/2/path = NodePath(".")
@@ -81,11 +82,12 @@ margin_right = 122.0
 margin_bottom = 41.0
 
 [node name="Label" type="Label" parent="MarginContainer"]
-margin_top = 34.0
+margin_top = 37.0
 margin_right = 241.0
-margin_bottom = 50.0
+margin_bottom = 47.0
 grow_horizontal = 0
 theme = ExtResource( 1 )
+custom_fonts/font = ExtResource( 3 )
 text = "Yusei are special beings"
 align = 1
 autowrap = true
@@ -95,6 +97,7 @@ anims/Intro = SubResource( 1 )
 anims/RESET = SubResource( 2 )
 
 [node name="Panel2" type="Panel" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 

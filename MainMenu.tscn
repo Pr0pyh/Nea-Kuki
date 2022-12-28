@@ -1,9 +1,12 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://MainMenu.cs" type="Script" id=1]
-[ext_resource path="res://World/GrassBackground.png" type="Texture" id=2]
+[ext_resource path="res://Logo.png" type="Texture" id=2]
 [ext_resource path="res://World/pink tree.png" type="Texture" id=3]
-[ext_resource path="res://TextBox/MinimalUI.tres" type="Theme" id=4]
+[ext_resource path="res://TextBox/newfontUI.tres" type="Theme" id=4]
+[ext_resource path="res://Front screen.png" type="Texture" id=5]
+[ext_resource path="res://Front screen background.png" type="Texture" id=6]
+[ext_resource path="res://Default theme.tres" type="Theme" id=7]
 
 [sub_resource type="AtlasTexture" id=56]
 atlas = ExtResource( 3 )
@@ -35,7 +38,22 @@ anchor_bottom = 1.0
 theme = ExtResource( 4 )
 script = ExtResource( 1 )
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -97.3511, -0.553173 )
+scale = Vector2( 0.759184, 0.791837 )
+texture = ExtResource( 5 )
+offset = Vector2( 446.995, 104.255 )
+
+[node name="Sprite" type="Sprite" parent="Sprite"]
+modulate = Color( 0.568627, 0.666667, 1, 0.192157 )
+position = Vector2( 432.66, 439.176 )
+scale = Vector2( 1.01064, 1.00532 )
+texture = ExtResource( 5 )
+offset = Vector2( 13.9261, -114.826 )
+flip_v = true
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
 position = Vector2( 232, 148 )
 scale = Vector2( 0.767347, 0.767347 )
 frames = SubResource( 60 )
@@ -44,29 +62,31 @@ playing = true
 offset = Vector2( 0, -80 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 13.0
-margin_top = 97.0
-margin_right = 93.0
-margin_bottom = 165.0
-theme = ExtResource( 4 )
+margin_left = 44.0
+margin_top = 103.0
+margin_right = 124.0
+margin_bottom = 171.0
+theme = ExtResource( 7 )
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 margin_right = 80.0
-margin_bottom = 18.0
+margin_bottom = 28.0
 text = "START"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
-margin_top = 22.0
+visible = false
+margin_top = 32.0
 margin_right = 80.0
-margin_bottom = 40.0
+margin_bottom = 60.0
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
-margin_top = 44.0
+margin_top = 32.0
 margin_right = 80.0
-margin_bottom = 62.0
+margin_bottom = 60.0
 text = "EXIT"
 
 [node name="Label" type="Label" parent="."]
+visible = false
 margin_left = 6.0
 margin_top = 24.0
 margin_right = 172.0
@@ -75,11 +95,24 @@ theme = ExtResource( 4 )
 text = "NEA & KUKI 
 DISCOVER JAPAN"
 
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 83, 50 )
+scale = Vector2( 1.46094, 1.40625 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="Sprite2"]
+modulate = Color( 0.223529, 0.25098, 0.533333, 1 )
+position = Vector2( 1.02673, 1.06667 )
+scale = Vector2( 1, 0.988889 )
+z_index = -1
+texture = ExtResource( 2 )
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground"]
-position = Vector2( 165, 102 )
-texture = ExtResource( 2 )
+position = Vector2( 159, 93.75 )
+scale = Vector2( 0.715835, 0.854978 )
+texture = ExtResource( 6 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 461.31, 231.328 )
 
