@@ -561,7 +561,6 @@ scale = Vector2( 2.24698, 2.55878 )
 z_index = 2
 frames = SubResource( 117 )
 animation = " blurred red"
-frame = 3
 playing = true
 offset = Vector2( 2.31128, -87.4252 )
 
@@ -579,7 +578,7 @@ position = Vector2( -10.9999, 90 )
 scale = Vector2( 1.08163, 1.9102 )
 frames = SubResource( 117 )
 animation = " blurred red"
-frame = 1
+frame = 2
 playing = true
 offset = Vector2( 2.31128, -87.4252 )
 
@@ -597,6 +596,7 @@ position = Vector2( 665, 60 )
 scale = Vector2( 1.05026, 1.78776 )
 frames = SubResource( 117 )
 animation = " blurred red"
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -622,7 +622,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 117 )
 animation = " blurred red"
-frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -641,7 +640,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 117 )
 animation = " blurred red"
-frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
