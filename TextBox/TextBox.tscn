@@ -14,9 +14,9 @@ margin_right = 319.0
 margin_bottom = 70.0
 
 [node name="Label" type="Label" parent="."]
-margin_top = 27.0
+margin_top = 30.0
 margin_right = 319.0
-margin_bottom = 43.0
+margin_bottom = 40.0
 theme = ExtResource( 1 )
 text = "Ovo je textbox."
 align = 1
