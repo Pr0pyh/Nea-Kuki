@@ -21,4 +21,9 @@ public class MainMenu : Control
 	{
 		GetTree().ChangeScene("res://IntroScene.tscn");
 	}
+
+	private void _on_Button2_pressed()
+	{
+		GetTree().ChangeScene("res://Controls.tscn");
+	}
 }

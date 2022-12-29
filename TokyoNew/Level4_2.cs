@@ -22,6 +22,7 @@ public class Level4_2 : Node2D
 		introExit = GetNode<AnimationPlayer>("IntroExit");
 		musicController = (MusicController)GetNode("/root/MusicController");
 		_player.objective = needed_score;
+		Input.MouseMode = Input.MouseModeEnum.Hidden;
 		introExit.Play("Entry");
 		if(musicController.audioPlayer.Playing == false)
 			musicController.playMusic("res://Music and Sounds/Tokyo.mp3");

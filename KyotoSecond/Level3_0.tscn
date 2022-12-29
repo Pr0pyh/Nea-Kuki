@@ -732,7 +732,7 @@ color = Color( 0.933333, 0.909804, 0.901961, 1 )
 environment = ExtResource( 18 )
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
-position = Vector2( 313, 82 )
+position = Vector2( 863, 79 )
 level = "res://KyotoSecond/Level3_1.tscn"
 
 [node name="Particles2D" type="Particles2D" parent="."]
@@ -750,7 +750,6 @@ anims/Exit = SubResource( 56 )
 anims/ACT1 = SubResource( 57 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 anchor_right = 1.0

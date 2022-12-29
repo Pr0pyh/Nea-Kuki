@@ -26,7 +26,7 @@ public class Level2_1 : Node2D
 		_player.objective = needed_score;
 		teaMaster.animations = animations;
 		introExit.Play("Entry");
-		Input.MouseMode = Input.MouseModeEnum.Hidden;
+		// Input.MouseMode = Input.MouseModeEnum.Hidden;
 		musicController.playMusic("res://Music and Sounds/Theme.mp3");
 	}
 
