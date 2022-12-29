@@ -26,7 +26,8 @@ public class Player : KinematicBody2D
 
     Position2D startPos;
     Kuki kuki;
-    [Export] bool android = false;
+    Joystick joystick;
+    [Export] bool android;
     public int health = 4;
     public int score = 0;
 
@@ -45,9 +46,12 @@ public class Player : KinematicBody2D
         sprite = this.GetNode<Sprite>("Sprite");
         timer = this.GetNode<Timer>("Timer");
         kuki = GetNode<Kuki>("Kuki");
+        joystick = GetNode<CanvasLayer>("CanvasLayer").GetNode<Joystick>("Joystick");
         newModulate = Modulate;
         if(partner)
             _player = this.GetParent().GetParent().GetNode<player2>("Player2");
+        if(android == false)
+            joystick.Visible = false;
         Modulate = new Color(1.0f, 1.0f, 1.0f, 1.0f);
     }
 
@@ -56,10 +60,7 @@ public class Player : KinematicBody2D
         switch(state) 
         {
             case EVENT.MOVE:
-                if(android == false)
-                    move_state(delta);
-                else
-                    MoveAndSlide(velocity * speed);
+                move_state(delta);
                 break;
             case EVENT.STOP:
                 animTree.Set("parameters/Idle/blend_position", velocity);
@@ -75,20 +76,27 @@ public class Player : KinematicBody2D
     {
         Vector2 input_vector = new Vector2();
 
-        if (Input.IsActionPressed("move_right"))
-            input_vector.x += 1;
+        if(android == false)
+        {
+            if (Input.IsActionPressed("move_right"))
+                input_vector.x += 1;
 
-        if (Input.IsActionPressed("move_left"))
-            input_vector.x -= 1;
+            if (Input.IsActionPressed("move_left"))
+                input_vector.x -= 1;
 
-        if (Input.IsActionPressed("down") && !horizontalInputOnly)
-            input_vector.y += 1;
+            if (Input.IsActionPressed("down") && !horizontalInputOnly)
+                input_vector.y += 1;
 
-        if (Input.IsActionPressed("up") && !horizontalInputOnly)
-            input_vector.y -= 1;
+            if (Input.IsActionPressed("up") && !horizontalInputOnly)
+                input_vector.y -= 1;
+
+            input_vector = input_vector.Normalized();
+        }
+        else
+        {
+            input_vector = joystick.get_velocity();
+        }
             
-
-        input_vector = input_vector.Normalized();
 
         if(input_vector != Vector2.Zero)
         {

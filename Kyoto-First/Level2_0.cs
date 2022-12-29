@@ -21,6 +21,7 @@ public class Level2_0 : Node2D
 		introExit = GetNode<AnimationPlayer>("IntroExit");
 		musicController = (MusicController)GetNode("/root/MusicController");
 		director = GetNode<AnimationPlayer>("Director");
+		Input.MouseMode = Input.MouseModeEnum.Hidden;
 		introExit.Play("Entry");
 		director.Play("ACT1");
 		musicController.playMusic("res://Music and Sounds/Theme.mp3");

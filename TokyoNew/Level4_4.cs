@@ -20,6 +20,7 @@ public class Level4_4 : Node2D
 		worker = (PackedScene)ResourceLoader.Load("res://NPC/Worker.tscn");
 		musicController = (MusicController)GetNode("/root/MusicController");
 		Sprite newWorker = (Sprite)worker.Instance();
+		Input.MouseMode = Input.MouseModeEnum.Hidden;
 		AddChild(newWorker);
 		newWorker.Position = startPos.Position;
 		animPlayer.Play("CREDITS");

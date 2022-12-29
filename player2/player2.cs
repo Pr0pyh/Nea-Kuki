@@ -18,6 +18,9 @@ public class player2 : Area2D
     Label textBox;
     Timer objectiveTimer;
     Timer interactiveTimer;
+    Position2D touchPosition;
+    bool android;
+    bool touched;
     public int objective;
     public bool talkingState;
     // Called when the node enters the scene tree for the first time.
@@ -28,7 +31,10 @@ public class player2 : Area2D
         textBox = TextBox.GetNode<Label>("Label");
         objectiveTimer = GetNode<Timer>("ObjectiveTimer");
         interactiveTimer = GetNode<Timer>("InteractiveTimer");
+        touchPosition = GetNode<CanvasLayer>("CanvasLayer").GetNode<Position2D>("TouchCursor");
         Monitoring = false;
+        touched = false;
+        android = false;
         collisionSprite.Visible = false;
         TextBox.Visible = false;
         state = EVENT.MOVING;
@@ -43,15 +49,12 @@ public class player2 : Area2D
                 Monitoring = false;
                 Monitorable = false;
                 collisionSprite.Visible = false;
-                Position = GetGlobalMousePosition();
-                if(Input.IsMouseButtonPressed((int)ButtonList.Left))
+                if(android == false)
                 {
-                    state = EVENT.LOOKING;          
+                    move_state();
                 }
-                else
-                {
-                    state = EVENT.MOVING;
-                }
+                else if(android == true && touched == true)
+                    Position = touchPosition.GlobalPosition;
                 break;
             case EVENT.LOOKING:
                 Monitoring = true;
@@ -71,6 +74,35 @@ public class player2 : Area2D
         }
 
         
+    }
+
+    public override void _Input(InputEvent @event)
+	{
+		if(@event is InputEventScreenTouch buttonEvent)
+		{
+            if(!touched)
+            {
+			    touchPosition.GlobalPosition = buttonEvent.Position;
+                state = EVENT.LOOKING;
+            }
+            else
+            {
+                state = EVENT.MOVING;
+            }
+		}
+	}
+
+    public void move_state()
+    {
+        Position = GetGlobalMousePosition();
+        if(Input.IsMouseButtonPressed((int)ButtonList.Left))
+        {
+            state = EVENT.LOOKING;          
+        }
+        else
+        {
+            state = EVENT.MOVING;
+        }
     }
 
     public void objectiveText(String textSuccess, String textFailure, int score)

@@ -57,32 +57,31 @@ visible = false
 position = Vector2( 232, 148 )
 scale = Vector2( 0.767347, 0.767347 )
 frames = SubResource( 60 )
-frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 44.0
-margin_top = 103.0
-margin_right = 124.0
-margin_bottom = 171.0
+margin_left = 40.0
+margin_top = 76.0
+margin_right = 130.0
+margin_bottom = 168.0
 theme = ExtResource( 7 )
 
 [node name="Button" type="Button" parent="VBoxContainer"]
-margin_right = 80.0
+margin_right = 90.0
 margin_bottom = 28.0
 text = "START"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
-visible = false
 margin_top = 32.0
-margin_right = 80.0
+margin_right = 90.0
 margin_bottom = 60.0
+text = "CONTROLS"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
-margin_top = 32.0
-margin_right = 80.0
-margin_bottom = 60.0
+margin_top = 64.0
+margin_right = 90.0
+margin_bottom = 92.0
 text = "EXIT"
 
 [node name="Label" type="Label" parent="."]
@@ -96,8 +95,8 @@ text = "NEA & KUKI
 DISCOVER JAPAN"
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 83, 50 )
-scale = Vector2( 1.46094, 1.40625 )
+position = Vector2( 85, 38 )
+scale = Vector2( 1.23368, 1.1875 )
 texture = ExtResource( 2 )
 
 [node name="Sprite2" type="Sprite" parent="Sprite2"]
@@ -117,3 +116,4 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 461.31, 231.328 )
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_Button2_pressed"]

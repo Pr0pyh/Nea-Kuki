@@ -24,6 +24,7 @@ public class Level4_3 : Node2D
 		audioPlayer = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
 		musicController = (MusicController)GetNode("/root/MusicController");
 		_player.objective = needed_score;
+		Input.MouseMode = Input.MouseModeEnum.Hidden;
 		_player.Visible = true;
 		introExit.Play("Entry");
 		if(musicController.audioPlayer.Playing == false)

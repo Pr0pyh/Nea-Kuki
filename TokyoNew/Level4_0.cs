@@ -19,6 +19,7 @@ public class Level4_0 : Node2D
 		door = GetNode<Door>("Door");
 		introExit = GetNode<AnimationPlayer>("IntroExit");
 		musicController = (MusicController)GetNode("/root/MusicController");
+		Input.MouseMode = Input.MouseModeEnum.Hidden;
 		introExit.Play("Entry");
 		musicController.playMusic("res://Music and Sounds/Tokyo.mp3");
 	}
