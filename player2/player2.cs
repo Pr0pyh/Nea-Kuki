@@ -19,7 +19,7 @@ public class player2 : Area2D
     Timer objectiveTimer;
     Timer interactiveTimer;
     Position2D touchPosition;
-    bool android;
+    [Export] public bool android;
     bool touched;
     public int objective;
     public bool talkingState;
@@ -34,7 +34,6 @@ public class player2 : Area2D
         touchPosition = GetNode<CanvasLayer>("CanvasLayer").GetNode<Position2D>("TouchCursor");
         Monitoring = false;
         touched = false;
-        android = false;
         collisionSprite.Visible = false;
         TextBox.Visible = false;
         state = EVENT.MOVING;
@@ -53,8 +52,11 @@ public class player2 : Area2D
                 {
                     move_state();
                 }
-                else if(android == true && touched == true)
-                    Position = touchPosition.GlobalPosition;
+                else if(touched)
+                {
+                    Position = GetGlobalMousePosition();
+                    state = EVENT.LOOKING;
+                }
                 break;
             case EVENT.LOOKING:
                 Monitoring = true;
@@ -80,15 +82,15 @@ public class player2 : Area2D
 	{
 		if(@event is InputEventScreenTouch buttonEvent)
 		{
-            if(!touched)
+            if(!touched && buttonEvent.Index == 0)
             {
-			    touchPosition.GlobalPosition = buttonEvent.Position;
-                state = EVENT.LOOKING;
+                touched = true;
             }
             else
             {
-                state = EVENT.MOVING;
+                touched = false;
             }
+            GD.Print(buttonEvent.Index);
 		}
 	}
 

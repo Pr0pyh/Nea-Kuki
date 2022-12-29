@@ -27,7 +27,7 @@ public class Joystick : Area2D
 		if(@event is InputEventScreenTouch buttonEvent)
 		{
 			float distance = buttonEvent.Position.DistanceTo(bigCircle.GlobalPosition);
-			if(!touched && distance<maxDistance)
+			if(!touched && distance<maxDistance && buttonEvent.Index == 0)
 			{
 				touched = true;
 			}
@@ -35,6 +35,7 @@ public class Joystick : Area2D
 			{
 				touched = false;
 			}
+			GD.Print(buttonEvent.Index);
 		}
 		GD.Print(move_vector);
 	}
