@@ -7,7 +7,6 @@
 [ext_resource path="res://Camera/CameraPlayer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://SumoFighter/Sumo32.png" type="Texture" id=6]
 [ext_resource path="res://SumoFighter/imgonline-com-ua-tile-rhUfonCzIkY.jpg" type="Texture" id=7]
-[ext_resource path="res://enemy_moving/enemy_moving.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Door/Door.tscn" type="PackedScene" id=9]
 [ext_resource path="res://KyotoSecond/Level3_1.cs" type="Script" id=10]
 [ext_resource path="res://Music and Sounds/Kyototest.mp3" type="AudioStream" id=11]
@@ -15,6 +14,7 @@
 [ext_resource path="res://ShadowTilemap.tscn" type="PackedScene" id=13]
 [ext_resource path="res://enemy/enemy.tscn" type="PackedScene" id=14]
 [ext_resource path="res://World/Kyoto particle.png" type="Texture" id=15]
+[ext_resource path="res://enemy_moving/enemy_moving_onii.tscn" type="PackedScene" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=56]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -654,34 +654,54 @@ scale = Vector2( 0.5, 0.5 )
 position = Vector2( 587, 235 )
 information = "Oni's are running away from me. Use it."
 
-[node name="enemy_moving7" parent="." instance=ExtResource( 8 )]
-position = Vector2( 538, 241 )
+[node name="enemy_moving_onii" parent="." instance=ExtResource( 16 )]
+position = Vector2( 541, 253 )
 scale = Vector2( 0.5, 0.5 )
 vertical = true
 
-[node name="enemy_moving" parent="." instance=ExtResource( 8 )]
-position = Vector2( 330, 214 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="enemy_moving3" parent="." instance=ExtResource( 8 )]
-position = Vector2( 179, 341 )
+[node name="enemy_moving_onii2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 349, 223 )
 scale = Vector2( 0.5, 0.5 )
 vertical = true
 
-[node name="enemy_moving4" parent="." instance=ExtResource( 8 )]
-position = Vector2( 456, 378 )
+[node name="AnimatedSprite" parent="enemy_moving_onii2" index="1"]
+animation = "Pink ish"
+frame = 3
+
+[node name="enemy_moving_onii3" parent="." instance=ExtResource( 16 )]
+position = Vector2( 99, 220 )
+scale = Vector2( 0.5, 0.5 )
+vertical = true
+
+[node name="AnimatedSprite" parent="enemy_moving_onii3" index="1"]
+animation = "Red light"
+frame = 3
+
+[node name="enemy_moving_onii4" parent="." instance=ExtResource( 16 )]
+position = Vector2( 180, 346 )
+scale = Vector2( 0.5, 0.5 )
+vertical = true
+
+[node name="AnimatedSprite" parent="enemy_moving_onii4" index="1"]
+frame = 1
+
+[node name="enemy_moving_onii5" parent="." instance=ExtResource( 16 )]
+position = Vector2( 480, 379 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="enemy_moving5" parent="." instance=ExtResource( 8 )]
-position = Vector2( 456, 446 )
+[node name="AnimatedSprite" parent="enemy_moving_onii5" index="1"]
+animation = "Pink ish"
+
+[node name="enemy_moving_onii6" parent="." instance=ExtResource( 16 )]
+position = Vector2( 481, 444 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="enemy_moving6" parent="." instance=ExtResource( 8 )]
-position = Vector2( 676, 246 )
-scale = Vector2( 0.5, 0.5 )
+[node name="AnimatedSprite" parent="enemy_moving_onii6" index="1"]
+animation = "Red light"
+frame = 1
 
-[node name="enemy_moving2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 112, 187 )
+[node name="enemy_moving_onii7" parent="." instance=ExtResource( 16 )]
+position = Vector2( 677, 257 )
 scale = Vector2( 0.5, 0.5 )
 vertical = true
 
@@ -701,7 +721,7 @@ anims/Exit = SubResource( 59 )
 
 [node name="Door" parent="." instance=ExtResource( 9 )]
 position = Vector2( 643, 78 )
-level = "res://KyotoSecond/Level3_3.tscn"
+level = "res://KyotoSecond/Level3_2.tscn"
 objectiveScore = 1
 
 [node name="Particles2D" type="Particles2D" parent="."]
@@ -744,3 +764,15 @@ __meta__ = {
 [connection signal="animation_started" from="IntroExit" to="YSort/Player" method="_on_IntroExit_animation_started"]
 
 [editable path="CameraPlayer"]
+[editable path="enemy_moving_onii2"]
+[editable path="enemy_moving_onii2/Hitbox"]
+[editable path="enemy_moving_onii3"]
+[editable path="enemy_moving_onii3/Hitbox"]
+[editable path="enemy_moving_onii4"]
+[editable path="enemy_moving_onii4/Hitbox"]
+[editable path="enemy_moving_onii5"]
+[editable path="enemy_moving_onii5/Hitbox"]
+[editable path="enemy_moving_onii6"]
+[editable path="enemy_moving_onii6/Hitbox"]
+[editable path="enemy_moving_onii7"]
+[editable path="enemy_moving_onii7/Hitbox"]

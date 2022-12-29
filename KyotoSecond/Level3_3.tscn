@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=2]
+[gd_scene load_steps=76 format=2]
 
 [ext_resource path="res://player2/player2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
@@ -7,12 +7,13 @@
 [ext_resource path="res://Camera/CameraPlayer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/CliffTileset.png" type="Texture" id=6]
 [ext_resource path="res://SumoFighter/imgonline-com-ua-tile-rhUfonCzIkY.jpg" type="Texture" id=7]
-[ext_resource path="res://enemy_moving/enemy_moving.tscn" type="PackedScene" id=8]
+[ext_resource path="res://enemy_moving/enemy_moving_onii.tscn" type="PackedScene" id=8]
 [ext_resource path="res://enemy/enemy.tscn" type="PackedScene" id=9]
 [ext_resource path="res://KyotoSecond/Level3_3.cs" type="Script" id=10]
 [ext_resource path="res://Music and Sounds/Kyototest.mp3" type="AudioStream" id=11]
 [ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Light.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Effects/kendi.png" type="Texture" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -774,6 +775,18 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 14 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=68]
+animations = [ {
+"frames": [ SubResource( 67 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [node name="Level3_3" type="Node2D"]
 script = ExtResource( 10 )
 
@@ -826,9 +839,6 @@ scale = Vector2( 0.5, 0.5 )
 animation = "ocajan"
 frame = 0
 
-[node name="AnimatedSprite" parent="KendoNPC/TextBox" index="2"]
-frame = 2
-
 [node name="Director" type="AnimationPlayer" parent="."]
 reset_on_save = false
 anims/ACT1 = SubResource( 60 )
@@ -847,52 +857,89 @@ anims/Exit = SubResource( 66 )
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 643, 78 )
-level = "res://EndScene.tscn"
+level = "res://TokyoNew/Level4_0.tscn"
 objectiveScore = 1
 
-[node name="enemy_moving" parent="." instance=ExtResource( 8 )]
-position = Vector2( 249, 559 )
-scale = Vector2( 0.4, 0.4 )
+[node name="enemy_moving_onii2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 349, 309 )
+scale = Vector2( 0.5, 0.5 )
 
-[node name="enemy_moving2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 300, 591 )
-scale = Vector2( 0.4, 0.4 )
+[node name="AnimatedSprite" parent="enemy_moving_onii2" index="1"]
+animation = "Pink ish"
+frame = 1
 
-[node name="enemy_moving3" parent="." instance=ExtResource( 8 )]
-position = Vector2( 477, 365 )
-scale = Vector2( 0.4, 0.4 )
+[node name="enemy_moving_onii3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 361, 391 )
+scale = Vector2( 0.5, 0.5 )
 
-[node name="enemy_moving4" parent="." instance=ExtResource( 8 )]
-position = Vector2( 476, 458 )
-scale = Vector2( 0.4, 0.4 )
+[node name="AnimatedSprite" parent="enemy_moving_onii3" index="1"]
+animation = "Pink ish"
+frame = 0
 
-[node name="enemy_moving5" parent="." instance=ExtResource( 8 )]
-position = Vector2( 343, 391 )
-scale = Vector2( 0.4, 0.4 )
+[node name="enemy_moving_onii4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 490, 369 )
+scale = Vector2( 0.5, 0.5 )
 
-[node name="enemy_moving6" parent="." instance=ExtResource( 8 )]
-position = Vector2( 146, 555 )
-scale = Vector2( 0.4, 0.4 )
+[node name="AnimatedSprite" parent="enemy_moving_onii4" index="1"]
+animation = "Pink ish"
+frame = 0
+
+[node name="enemy_moving_onii5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 486, 455 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="AnimatedSprite" parent="enemy_moving_onii5" index="1"]
+animation = "Red light"
+frame = 1
+
+[node name="enemy_moving_onii6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 304, 593 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="AnimatedSprite" parent="enemy_moving_onii6" index="1"]
+animation = "Red light"
+
+[node name="enemy_moving_onii7" parent="." instance=ExtResource( 8 )]
+position = Vector2( 251, 557 )
+scale = Vector2( 0.5, 0.5 )
 vertical = true
 
-[node name="enemy_moving7" parent="." instance=ExtResource( 8 )]
-position = Vector2( 175, 554 )
-scale = Vector2( 0.4, 0.4 )
+[node name="AnimatedSprite" parent="enemy_moving_onii7" index="1"]
+animation = "Pink ish"
+frame = 3
+
+[node name="enemy_moving_onii8" parent="." instance=ExtResource( 8 )]
+position = Vector2( 144, 557 )
+scale = Vector2( 0.3, 0.3 )
 vertical = true
 
-[node name="enemy_moving8" parent="." instance=ExtResource( 8 )]
-position = Vector2( 177, 265 )
-scale = Vector2( 0.4, 0.4 )
+[node name="AnimatedSprite" parent="enemy_moving_onii8" index="1"]
+frame = 3
+
+[node name="enemy_moving_onii9" parent="." instance=ExtResource( 8 )]
+position = Vector2( 178, 559 )
+scale = Vector2( 0.3, 0.3 )
 vertical = true
+
+[node name="enemy_moving_onii10" parent="." instance=ExtResource( 8 )]
+position = Vector2( 176, 266 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="AnimatedSprite" parent="enemy_moving_onii10" index="1"]
+animation = "Pink ish"
 
 [node name="Enemy" parent="." instance=ExtResource( 9 )]
 position = Vector2( 45, 151 )
 information = "This is Shinai, Kendo sword. This is symbol of honor and courage."
 
+[node name="Sprite" parent="Enemy" index="2"]
+frames = SubResource( 68 )
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 modulate = Color( 1, 1, 1, 0.9 )
@@ -967,3 +1014,22 @@ scale = Vector2( 0.492188, 0.492188 )
 
 [editable path="CameraPlayer"]
 [editable path="KendoNPC"]
+[editable path="enemy_moving_onii2"]
+[editable path="enemy_moving_onii2/Hitbox"]
+[editable path="enemy_moving_onii3"]
+[editable path="enemy_moving_onii3/Hitbox"]
+[editable path="enemy_moving_onii4"]
+[editable path="enemy_moving_onii4/Hitbox"]
+[editable path="enemy_moving_onii5"]
+[editable path="enemy_moving_onii5/Hitbox"]
+[editable path="enemy_moving_onii6"]
+[editable path="enemy_moving_onii6/Hitbox"]
+[editable path="enemy_moving_onii7"]
+[editable path="enemy_moving_onii7/Hitbox"]
+[editable path="enemy_moving_onii8"]
+[editable path="enemy_moving_onii8/Hitbox"]
+[editable path="enemy_moving_onii9"]
+[editable path="enemy_moving_onii9/Hitbox"]
+[editable path="enemy_moving_onii10"]
+[editable path="enemy_moving_onii10/Hitbox"]
+[editable path="Enemy"]

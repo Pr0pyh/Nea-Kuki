@@ -8,7 +8,7 @@
 [ext_resource path="res://NPC/KendoNPC.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Door/Door.tscn" type="PackedScene" id=7]
 [ext_resource path="res://KyotoSecond/Level3_2.cs" type="Script" id=8]
-[ext_resource path="res://enemy_moving/enemy_moving.tscn" type="PackedScene" id=9]
+[ext_resource path="res://enemy_moving/enemy_moving_onii.tscn" type="PackedScene" id=9]
 [ext_resource path="res://enemy/enemy.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Light.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Music and Sounds/Kyototest.mp3" type="AudioStream" id=12]
@@ -604,41 +604,68 @@ objectiveScore = 1
 position = Vector2( 485, 349 )
 information = "This is Bogu. Kendo armor used to protect..."
 
-[node name="enemy_moving" parent="." instance=ExtResource( 9 )]
-position = Vector2( 341, 316 )
+[node name="enemy_moving_onii2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 349, 309 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="enemy_moving2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 341, 387 )
+[node name="AnimatedSprite" parent="enemy_moving_onii2" index="1"]
+animation = "Pink ish"
+frame = 1
+
+[node name="enemy_moving_onii3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 351, 384 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="enemy_moving4" parent="." instance=ExtResource( 9 )]
-position = Vector2( 224, 219 )
+[node name="AnimatedSprite" parent="enemy_moving_onii3" index="1"]
+frame = 3
+
+[node name="enemy_moving_onii4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 220, 241 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="enemy_moving8" parent="." instance=ExtResource( 9 )]
-position = Vector2( 545, 456 )
+[node name="AnimatedSprite" parent="enemy_moving_onii4" index="1"]
+animation = "Red light"
+frame = 3
+
+[node name="enemy_moving_onii5" parent="." instance=ExtResource( 9 )]
+position = Vector2( 129, 359 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="enemy_moving3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 272, 421 )
-scale = Vector2( 0.4, 0.4 )
+[node name="AnimatedSprite" parent="enemy_moving_onii5" index="1"]
+animation = "Red light"
+frame = 1
+
+[node name="enemy_moving_onii6" parent="." instance=ExtResource( 9 )]
+position = Vector2( 271, 461 )
+scale = Vector2( 0.3, 0.3 )
 vertical = true
 
-[node name="enemy_moving5" parent="." instance=ExtResource( 9 )]
-position = Vector2( 89, 364 )
-scale = Vector2( 0.4, 0.4 )
+[node name="AnimatedSprite" parent="enemy_moving_onii6" index="1"]
+frame = 3
+
+[node name="enemy_moving_onii7" parent="." instance=ExtResource( 9 )]
+position = Vector2( 320, 581 )
+scale = Vector2( 0.5, 0.5 )
 vertical = true
 
-[node name="enemy_moving6" parent="." instance=ExtResource( 9 )]
-position = Vector2( 341, 588 )
-scale = Vector2( 0.4, 0.4 )
+[node name="AnimatedSprite" parent="enemy_moving_onii7" index="1"]
+animation = "Red light"
+frame = 3
+
+[node name="enemy_moving_onii8" parent="." instance=ExtResource( 9 )]
+position = Vector2( 511, 580 )
+scale = Vector2( 0.5, 0.5 )
 vertical = true
 
-[node name="enemy_moving7" parent="." instance=ExtResource( 9 )]
-position = Vector2( 554, 591 )
-scale = Vector2( 0.4, 0.4 )
-vertical = true
+[node name="AnimatedSprite" parent="enemy_moving_onii8" index="1"]
+frame = 3
+
+[node name="enemy_moving_onii9" parent="." instance=ExtResource( 9 )]
+position = Vector2( 580, 462 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="AnimatedSprite" parent="enemy_moving_onii9" index="1"]
+animation = "Pink ish"
 
 [node name="Light" parent="." instance=ExtResource( 11 )]
 position = Vector2( 160, 24 )
@@ -732,3 +759,19 @@ visible = false
 [connection signal="animation_started" from="IntroExit" to="YSort/Player" method="_on_IntroExit_animation_started"]
 
 [editable path="CameraPlayer"]
+[editable path="enemy_moving_onii2"]
+[editable path="enemy_moving_onii2/Hitbox"]
+[editable path="enemy_moving_onii3"]
+[editable path="enemy_moving_onii3/Hitbox"]
+[editable path="enemy_moving_onii4"]
+[editable path="enemy_moving_onii4/Hitbox"]
+[editable path="enemy_moving_onii5"]
+[editable path="enemy_moving_onii5/Hitbox"]
+[editable path="enemy_moving_onii6"]
+[editable path="enemy_moving_onii6/Hitbox"]
+[editable path="enemy_moving_onii7"]
+[editable path="enemy_moving_onii7/Hitbox"]
+[editable path="enemy_moving_onii8"]
+[editable path="enemy_moving_onii8/Hitbox"]
+[editable path="enemy_moving_onii9"]
+[editable path="enemy_moving_onii9/Hitbox"]
