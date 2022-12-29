@@ -426,7 +426,6 @@ scale = Vector2( 0.5, 0.5 )
 collision_layer = 2
 script = SubResource( 1 )
 speed = 100
-android = true
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -22 )

@@ -65,7 +65,6 @@ playing = true
 position = Vector2( 51, -9 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 22 )
-frame = 3
 playing = true
 
 [node name="TextBox" type="MarginContainer" parent="."]
@@ -80,9 +79,9 @@ margin_right = 200.0
 margin_bottom = 46.0
 
 [node name="Label" type="Label" parent="TextBox"]
-margin_top = 15.0
+margin_top = 18.0
 margin_right = 200.0
-margin_bottom = 31.0
+margin_bottom = 28.0
 theme = ExtResource( 6 )
 text = "Zdravo, Nea"
 align = 1
@@ -92,7 +91,7 @@ valign = 1
 position = Vector2( 176, 30 )
 scale = Vector2( 0.875, 0.895508 )
 frames = SubResource( 28 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionSpace" type="Area2D" parent="."]

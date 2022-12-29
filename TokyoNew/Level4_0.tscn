@@ -500,7 +500,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 117 )
 animation = " blurred red"
-frame = 1
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -519,6 +519,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 117 )
 animation = " blurred red"
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -537,7 +538,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 117 )
 animation = " blurred red"
-frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -556,7 +556,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 117 )
 animation = " blurred red"
-frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -656,6 +655,7 @@ anims/Entry = SubResource( 55 )
 anims/Exit = SubResource( 56 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 anchor_right = 1.0

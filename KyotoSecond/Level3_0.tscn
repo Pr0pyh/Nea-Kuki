@@ -750,6 +750,7 @@ anims/Exit = SubResource( 56 )
 anims/ACT1 = SubResource( 57 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 anchor_right = 1.0
