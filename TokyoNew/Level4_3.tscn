@@ -577,6 +577,7 @@ __meta__ = {
 "_edit_group_": true
 }
 speed = 70
+haveKuki = false
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../CameraPlayer")
@@ -603,103 +604,103 @@ anims/Exit = SubResource( 64 )
 anims/RESET = SubResource( 65 )
 
 [node name="enemy_moving" parent="." instance=ExtResource( 8 )]
-position = Vector2( 337, 145 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 337, 152 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 272, 144 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 272, 151 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving3" parent="." instance=ExtResource( 8 )]
-position = Vector2( 208, 144 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 208, 151 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving4" parent="." instance=ExtResource( 8 )]
-position = Vector2( 144, 145 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 144, 152 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving5" parent="." instance=ExtResource( 8 )]
-position = Vector2( 337, 236 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 337, 243 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving6" parent="." instance=ExtResource( 8 )]
-position = Vector2( 272, 235 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 272, 242 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving7" parent="." instance=ExtResource( 8 )]
-position = Vector2( 208, 235 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 208, 242 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving8" parent="." instance=ExtResource( 8 )]
-position = Vector2( 144, 236 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 144, 243 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving9" parent="." instance=ExtResource( 8 )]
-position = Vector2( 336, 332 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 336, 339 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving10" parent="." instance=ExtResource( 8 )]
-position = Vector2( 271, 331 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 271, 338 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving11" parent="." instance=ExtResource( 8 )]
-position = Vector2( 207, 331 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 207, 338 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving12" parent="." instance=ExtResource( 8 )]
-position = Vector2( 143, 332 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 143, 339 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving13" parent="." instance=ExtResource( 8 )]
-position = Vector2( 337, 429 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 337, 436 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving14" parent="." instance=ExtResource( 8 )]
-position = Vector2( 272, 428 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 272, 435 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving15" parent="." instance=ExtResource( 8 )]
-position = Vector2( 208, 428 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 208, 435 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving16" parent="." instance=ExtResource( 8 )]
-position = Vector2( 144, 429 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 144, 436 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving17" parent="." instance=ExtResource( 8 )]
-position = Vector2( 336, 43.9999 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 336, 50.9999 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving18" parent="." instance=ExtResource( 8 )]
-position = Vector2( 271, 43 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 271, 50 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving19" parent="." instance=ExtResource( 8 )]
-position = Vector2( 207, 43 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 207, 50 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving20" parent="." instance=ExtResource( 8 )]
-position = Vector2( 143, 44 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 143, 51 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="Door" parent="." instance=ExtResource( 10 )]

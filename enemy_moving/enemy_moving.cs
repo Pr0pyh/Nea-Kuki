@@ -40,11 +40,13 @@ public class enemy_moving : KinematicBody2D
 				else
 					moveDir.x = (Position - player2.Position).Normalized().x;
 				speed = 50.0f;
+				Modulate = new Color(1.0f, 1.0f, 0.0f, 1.0f);
 				break;
 			case EVENT.NOT_MOVING:
 				if(this.IsOnWall())
 					moveDir *= -1;
 				speed = 50.0f;
+				Modulate = new Color(1.0f, 1.0f, 1.0f, 1.0f); 
 				break;
 		}
 

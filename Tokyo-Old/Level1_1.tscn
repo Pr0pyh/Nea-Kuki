@@ -971,6 +971,7 @@ __meta__ = {
 position = Vector2( 0, -2 )
 scale = Vector2( 1.22222, 1.18182 )
 z_index = 4
+frame = 3
 flip_h = true
 
 [node name="Light2D" type="Light2D" parent="NPC/Sprite" index="0"]
@@ -987,7 +988,6 @@ theme = ExtResource( 31 )
 [node name="AnimatedSprite" parent="NPC/TextBox" index="2"]
 position = Vector2( 182, 30 )
 scale = Vector2( 0.937497, 0.9375 )
-frame = 2
 
 [node name="CameraPlayer" parent="." instance=ExtResource( 7 )]
 position = Vector2( 309, 390 )
@@ -1279,6 +1279,7 @@ position = Vector2( 296, 21 )
 scale = Vector2( 0.565306, 0.586214 )
 frames = SubResource( 64 )
 animation = "blurred pink"
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1299,6 +1300,7 @@ scale = Vector2( 0.565306, 0.673469 )
 z_index = 4
 frames = SubResource( 64 )
 animation = "blurred pink"
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1328,7 +1330,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 64 )
 animation = " blurred red"
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1348,7 +1350,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 64 )
 animation = " blurred red"
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1368,7 +1370,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 64 )
 animation = " blurred red"
-frame = 1
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1385,6 +1387,7 @@ position = Vector2( 692, 29 )
 scale = Vector2( 0.421292, 0.646067 )
 frames = SubResource( 64 )
 animation = "blurred pink"
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1405,6 +1408,7 @@ position = Vector2( 480, 20 )
 scale = Vector2( 0.583673, 0.591837 )
 frames = SubResource( 64 )
 animation = "blurred pink"
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1423,6 +1427,7 @@ position = Vector2( 45, 43 )
 scale = Vector2( 0.625, 0.59375 )
 z_index = 1
 frames = SubResource( 75 )
+frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Grass"]
@@ -1431,7 +1436,6 @@ position = Vector2( 1.6, 6.73685 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = -1
 frames = SubResource( 75 )
-frame = 5
 playing = true
 flip_h = true
 
@@ -1440,6 +1444,7 @@ position = Vector2( 225, 43 )
 scale = Vector2( 0.625, 0.59375 )
 z_index = 1
 frames = SubResource( 75 )
+frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Grass5"]
@@ -1448,7 +1453,6 @@ position = Vector2( -9.60001, 3.36842 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = -1
 frames = SubResource( 75 )
-frame = 5
 playing = true
 flip_h = true
 
@@ -1457,7 +1461,6 @@ position = Vector2( 197, 141 )
 scale = Vector2( 0.625, 0.59375 )
 z_index = 1
 frames = SubResource( 75 )
-frame = 5
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Grass2"]
@@ -1466,7 +1469,6 @@ position = Vector2( 3.2, 6.73685 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 75 )
-frame = 5
 playing = true
 flip_h = true
 
@@ -1475,7 +1477,7 @@ position = Vector2( 244, 148 )
 scale = Vector2( 0.625, 0.59375 )
 z_index = 2
 frames = SubResource( 75 )
-frame = 4
+frame = 5
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Grass3"]
@@ -1484,7 +1486,7 @@ position = Vector2( 3.2, 6.73685 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 75 )
-frame = 4
+frame = 5
 playing = true
 flip_h = true
 
@@ -1493,7 +1495,7 @@ position = Vector2( 313, 205 )
 scale = Vector2( 0.625, 0.59375 )
 z_index = 2
 frames = SubResource( 75 )
-frame = 3
+frame = 4
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="YSort/Grass4"]
@@ -1502,7 +1504,7 @@ position = Vector2( -1.60004, 5.05266 )
 scale = Vector2( 0.75, 0.763158 )
 z_index = 1
 frames = SubResource( 75 )
-frame = 3
+frame = 4
 playing = true
 flip_h = true
 

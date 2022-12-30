@@ -455,6 +455,7 @@ __meta__ = {
 "_edit_group_": true
 }
 speed = 70
+haveKuki = false
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../CameraPlayer")
@@ -472,40 +473,40 @@ anims/RESET = SubResource( 65 )
 
 [node name="enemy_moving" parent="." instance=ExtResource( 7 )]
 position = Vector2( 74, 145 )
-scale = Vector2( 0.4, 0.4 )
+scale = Vector2( 0.35, 0.35 )
 
 [node name="enemy_moving2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 74, 207 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 74, 209 )
+scale = Vector2( 0.35, 0.35 )
 
 [node name="enemy_moving3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 73, 270 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 73, 272 )
+scale = Vector2( 0.35, 0.35 )
 
 [node name="enemy_moving4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 74, 336 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 74, 338 )
+scale = Vector2( 0.35, 0.35 )
 
 [node name="enemy_moving5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 73, 400 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 73, 402 )
+scale = Vector2( 0.35, 0.35 )
 
 [node name="enemy_moving6" parent="." instance=ExtResource( 7 )]
 position = Vector2( 144, 71 )
-scale = Vector2( 0.4, 0.4 )
+scale = Vector2( 0.35, 0.35 )
 vertical = true
 
 [node name="enemy_moving7" parent="." instance=ExtResource( 7 )]
-position = Vector2( 240, 174 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 240, 178 )
+scale = Vector2( 0.35, 0.35 )
 
 [node name="enemy_moving8" parent="." instance=ExtResource( 7 )]
-position = Vector2( 239, 241 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 239, 245 )
+scale = Vector2( 0.35, 0.35 )
 
 [node name="enemy_moving9" parent="." instance=ExtResource( 7 )]
-position = Vector2( 240, 303 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 240, 307 )
+scale = Vector2( 0.35, 0.35 )
 
 [node name="enemy_moving10" parent="." instance=ExtResource( 7 )]
 position = Vector2( 303, 59 )

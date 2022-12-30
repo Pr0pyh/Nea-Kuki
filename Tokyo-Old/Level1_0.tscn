@@ -562,7 +562,6 @@ scale = Vector2( 1.09235, 1.22793 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
-frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -581,7 +580,7 @@ scale = Vector2( 0.584133, 0.711251 )
 z_index = 4
 frames = SubResource( 115 )
 animation = " blurred red"
-frame = 3
+frame = 2
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -600,6 +599,7 @@ scale = Vector2( 0.859694, 0.999358 )
 z_index = -2
 frames = SubResource( 115 )
 animation = " blurred red"
+frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -620,6 +620,7 @@ __meta__ = {
 }
 speed = 40
 horizontalInputOnly = true
+haveKuki = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../CameraPlayer")

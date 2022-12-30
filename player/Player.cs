@@ -6,6 +6,7 @@ public class Player : KinematicBody2D
     [Export] public int speed = 5;
     [Export] public bool partner;
     [Export] public bool horizontalInputOnly;
+    [Export] public bool haveKuki;
 
     public enum EVENT{
         MOVE,
@@ -52,6 +53,8 @@ public class Player : KinematicBody2D
             _player = this.GetParent().GetParent().GetNode<player2>("Player2");
         if(android == false)
             joystick.Visible = false;
+        if(haveKuki == false)
+            kuki.Visible = false;
         Modulate = new Color(1.0f, 1.0f, 1.0f, 1.0f);
     }
 

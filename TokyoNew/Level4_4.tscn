@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://World/tilesets/CliffTileMap.tres" type="TileSet" id=1]
 [ext_resource path="res://Camera/CameraPlayer.tscn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://TokyoNew/Level4_4.cs" type="Script" id=4]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=5]
 [ext_resource path="res://Music and Sounds/Credits2.mp3" type="AudioStream" id=6]
-[ext_resource path="res://NPC/Worker.tscn" type="PackedScene" id=7]
 [ext_resource path="res://TextBox/TextBox.tres" type="Theme" id=8]
 [ext_resource path="res://Music and Sounds/Swipe.wav" type="AudioStream" id=9]
 [ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=10]
@@ -65,10 +64,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 14.3, 20.4, 25.3, 29.8, 34.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 14.3, 20.4, 25.3, 29.8, 34.8, 38.9, 42.9, 46.9, 51.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ "Credits:", "with honors", "some text", "thank you", "made for friendship with japan" ]
+"values": [ "NEA & KUKI OTKRIVAJU JAPAN", "Art design:", "Masa Salinacki", "Audio design and music: ", "Dusan Dakic", "Programming and gameplay: ", "Andrej Drmanovic", "Made in honor of 140 years long friendship of Japan and Serbia", "Thank you" ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("AudioStreamPlayer:volume_db")
@@ -181,22 +180,20 @@ margin_right = -102.0
 margin_bottom = 50.0
 
 [node name="Label" type="Label" parent="YSort/Player/MarginContainer"]
-visible = false
 margin_top = 144.0
-margin_right = 182.0
+margin_right = 395.0
 margin_bottom = 158.0
 theme = ExtResource( 8 )
-text = "some text"
+text = "Made in honor of 140 years long friendship of Japan and Serbia"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.478431, 0.721569, 0.619608, 1 )
+color = Color( 0.698039, 0.545098, 0.0784314, 1 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 60 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-volume_db = -67.612
 
 [node name="StartPosition" type="Position2D" parent="."]
 position = Vector2( 1, 307 )
@@ -207,9 +204,6 @@ position = Vector2( 526, 125 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger"]
 position = Vector2( 0, 5.5 )
 shape = SubResource( 61 )
-
-[node name="Worker" parent="." instance=ExtResource( 7 )]
-position = Vector2( -35, 29 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
