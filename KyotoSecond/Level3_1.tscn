@@ -666,7 +666,7 @@ vertical = true
 
 [node name="AnimatedSprite" parent="enemy_moving_onii2" index="1"]
 animation = "Pink ish"
-frame = 3
+frame = 1
 
 [node name="enemy_moving_onii3" parent="." instance=ExtResource( 16 )]
 position = Vector2( 99, 220 )
@@ -675,7 +675,7 @@ vertical = true
 
 [node name="AnimatedSprite" parent="enemy_moving_onii3" index="1"]
 animation = "Red light"
-frame = 3
+frame = 1
 
 [node name="enemy_moving_onii4" parent="." instance=ExtResource( 16 )]
 position = Vector2( 180, 346 )
@@ -683,7 +683,7 @@ scale = Vector2( 0.5, 0.5 )
 vertical = true
 
 [node name="AnimatedSprite" parent="enemy_moving_onii4" index="1"]
-frame = 1
+frame = 3
 
 [node name="enemy_moving_onii5" parent="." instance=ExtResource( 16 )]
 position = Vector2( 480, 379 )
@@ -691,6 +691,7 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="AnimatedSprite" parent="enemy_moving_onii5" index="1"]
 animation = "Pink ish"
+frame = 3
 
 [node name="enemy_moving_onii6" parent="." instance=ExtResource( 16 )]
 position = Vector2( 481, 444 )
@@ -704,6 +705,9 @@ frame = 1
 position = Vector2( 677, 257 )
 scale = Vector2( 0.5, 0.5 )
 vertical = true
+
+[node name="AnimatedSprite" parent="enemy_moving_onii7" index="1"]
+frame = 1
 
 [node name="Director" type="AnimationPlayer" parent="."]
 reset_on_save = false
@@ -734,7 +738,6 @@ stream = ExtResource( 11 )
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 modulate = Color( 1, 1, 1, 0.9 )

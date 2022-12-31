@@ -518,7 +518,6 @@ position = Vector2( 335, 52 )
 level = "res://TokyoNew/Level4_3.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 anchor_left = -0.434375

@@ -24,7 +24,7 @@ public class Level1_2 : Node2D
 		musicController = (MusicController)GetNode("/root/MusicController");
 		introExit = GetNode<AnimationPlayer>("IntroExit");
 		introExit.Play("Entry");
-		Input.MouseMode = Input.MouseModeEnum.Hidden;
+		// Input.MouseMode = Input.MouseModeEnum.Hidden;
 		musicController.playMusic("res://Music and Sounds/Kyototest.mp3");
 	}
 

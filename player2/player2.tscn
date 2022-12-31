@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://NPC/NPC.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://player2/player2.cs" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://TextBox/TextBox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Minecraft.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://TextBox/newfontUI.tres" type="Theme" id=6]
+[ext_resource path="res://player2/Touch.tscn" type="PackedScene" id=7]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 63.0079
@@ -54,9 +55,7 @@ one_shot = true
 wait_time = 3.0
 one_shot = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TouchCursor" type="Position2D" parent="CanvasLayer"]
+[node name="Touch" parent="." instance=ExtResource( 7 )]
 
 [connection signal="timeout" from="ObjectiveTimer" to="." method="_on_ObjectiveTimer_timeout"]
 [connection signal="timeout" from="InteractiveTimer" to="." method="_on_InteractiveTimer_timeout"]

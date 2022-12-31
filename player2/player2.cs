@@ -19,6 +19,7 @@ public class player2 : Area2D
 	Timer objectiveTimer;
 	Timer interactiveTimer;
 	Position2D touchPosition;
+	Touch touch;
 	[Export] public bool android;
 	bool touched;
 	public int objective;
@@ -31,7 +32,7 @@ public class player2 : Area2D
 		textBox = TextBox.GetNode<Label>("Label");
 		objectiveTimer = GetNode<Timer>("ObjectiveTimer");
 		interactiveTimer = GetNode<Timer>("InteractiveTimer");
-		touchPosition = GetNode<CanvasLayer>("CanvasLayer").GetNode<Position2D>("TouchCursor");
+		touch  = GetNode<Touch>("Touch");
 		Monitoring = false;
 		touched = false;
 		collisionSprite.Visible = false;
@@ -48,15 +49,7 @@ public class player2 : Area2D
 				Monitoring = false;
 				Monitorable = false;
 				collisionSprite.Visible = false;
-				if(android == false)
-				{
-					move_state();
-				}
-				else if(touched)
-				{
-					Position = GetGlobalMousePosition();
-					state = EVENT.LOOKING;
-				}
+				move_state();
 				break;
 			case EVENT.LOOKING:
 				Monitoring = true;
@@ -78,32 +71,25 @@ public class player2 : Area2D
 		
 	}
 
-	public override void _Input(InputEvent @event)
-	{
-		if(@event is InputEventScreenTouch buttonEvent)
-		{
-			if(!touched && buttonEvent.Index == 0)
-			{
-				touched = true;
-			}
-			else
-			{
-				touched = false;
-			}
-			GD.Print(buttonEvent.Index);
-		}
-	}
-
 	public void move_state()
 	{
-		Position = GetGlobalMousePosition();
-		if(Input.IsMouseButtonPressed((int)ButtonList.Left))
+		if(android == true)
 		{
-			state = EVENT.LOOKING;          
+			Position = touch.get_velocity();
+			if(touch.touched)
+				state = EVENT.LOOKING;
 		}
 		else
 		{
-			state = EVENT.MOVING;
+			Position = GetGlobalMousePosition();
+			if(Input.IsMouseButtonPressed((int)ButtonList.Left))
+			{
+				state = EVENT.LOOKING;          
+			}
+			else
+			{
+				state = EVENT.MOVING;
+			}
 		}
 	}
 

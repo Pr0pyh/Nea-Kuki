@@ -1171,7 +1171,6 @@ __meta__ = {
 "_edit_group_": true
 }
 speed = 70
-partner = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../CameraPlayer")
@@ -1181,7 +1180,7 @@ visible = false
 position = Vector2( 423, 133.541 )
 scale = Vector2( 0.506122, 0.57551 )
 frames = SubResource( 60 )
-frame = 2
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1194,7 +1193,7 @@ texture = ExtResource( 14 )
 position = Vector2( 154, 405.112 )
 scale = Vector2( 0.628571, 0.632653 )
 frames = SubResource( 60 )
-frame = 2
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1207,7 +1206,7 @@ texture = ExtResource( 14 )
 position = Vector2( 431.5, 263.327 )
 scale = Vector2( 0.608163, 0.604082 )
 frames = SubResource( 60 )
-frame = 2
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1304,6 +1303,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 164 )
 animation = " blurred red"
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1324,6 +1324,7 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 164 )
 animation = " blurred red"
+frame = 1
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1343,7 +1344,6 @@ scale = Vector2( 0.764286, 0.843357 )
 z_index = 4
 frames = SubResource( 164 )
 animation = " blurred red"
-frame = 3
 playing = true
 offset = Vector2( 0, -80 )
 
@@ -1445,7 +1445,7 @@ texture = ExtResource( 14 )
 
 [node name="Door" parent="." instance=ExtResource( 2 )]
 position = Vector2( 641, 109 )
-level = "res://KyotoSecond/Level3_1.tscn"
+level = "res://KyotoSecond/Level3_0.tscn"
 objectiveScore = 3
 
 [node name="TeaMaster" parent="." instance=ExtResource( 3 )]
@@ -1493,7 +1493,6 @@ process_material = SubResource( 169 )
 texture = ExtResource( 30 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 modulate = Color( 1, 1, 1, 0 )
